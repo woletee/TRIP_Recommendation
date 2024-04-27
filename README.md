@@ -17,6 +17,7 @@ Currently, two official plugins are available:
   https://tailwindcss.com/docs/guides/vite
 
   npm install -D tailwindcss postcss autoprefixer
+  
   npx tailwindcss init -p
 
 # After you can create all elements and copy my code. 
