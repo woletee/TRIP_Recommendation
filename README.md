@@ -7,13 +7,17 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-# 1. Create your project:
+## 1. Create a project:
 
   npm create vite@latest my-project -- --template react
   
   cd my-project
 
-# Install Tailwind CSS:
+  npm install
+
+  npm run dev -- run app
+  
+## Install Tailwind CSS:
 
   https://tailwindcss.com/docs/guides/vite
 
@@ -21,9 +25,9 @@ Currently, two official plugins are available:
   
   npx tailwindcss init -p
 
-# After you can create all elements and copy my code. 
+## After you can create all elements and copy my code. 
 
-# Don't forget to install these:
+## Don't forget to install these:
 
   npm install react-slick --save
   
