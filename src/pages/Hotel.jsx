@@ -32,7 +32,7 @@ function Restaurants() {
       <div className="dark:bg-gray-900 dark:text-white bg-gray-50 py-10">
         <section data-aos="fade-up" className="container">
           <h1 className="my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-bold mt-20">
-            Restaurants
+            Hotels (Here should be Hotel data but we didn't find good one)
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {restaurantData.map((item, index) => (
@@ -64,26 +64,6 @@ function Restaurants() {
       </div>
     </>
   );
-  // return (
-  //   <div className="restaurant-data text-center mt-20">
-  //     <h1 className=" text-left my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-bold ">
-  //         Restaurant
-  //     </h1>
-  //     <div className="flex flex-wrap justify-center gap-8">
-  //       {restaurantData.map((item, index) => (
-  //         <div key={index} className="restaurant w-64 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
-  //           <img src={item.image} alt={item.name} className="w-full h-40 object-cover rounded-t-lg" />
-  //           <div className="p-4">
-  //             <h2 className="text-xl font-bold text-gray-800 mb-2">{item.name}</h2>
-  //             <p className="text-sm text-gray-600 mb-1">Location: {item.address}</p>
-  //             <p className="text-sm text-gray-600">Ranking: {item.rankingPosition}</p>
-  //             {/* Add more fields as needed */}
-  //           </div>
-  //         </div>
-  //       ))}
-  //     </div>
-  //   </div>
-  // );
 }
 
 export default Restaurants;
