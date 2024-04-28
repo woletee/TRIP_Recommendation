@@ -24,7 +24,11 @@ export const NavbarLinks = [
   },
   {
     name: "Restaurants",
-    link: "/Restaurants",
+    link: "/restaurants",
+  },
+  {
+    name: "Hotels",
+    link: "/hotel",
   },
 ];
 
@@ -75,8 +79,13 @@ const Navbar = ({ handleOrderPopup }) => {
                   </NavLink>
                 </li>
                 <li className="py-4">
-                  <NavLink to="/Restaurants" activeClassName="active">
+                  <NavLink to="/restaurants" activeClassName="active">
                     Restaurants
+                  </NavLink>
+                </li>
+                <li className="py-4">
+                  <NavLink to="/hotels" activeClassName="active">
+                    Hotels
                   </NavLink>
                 </li>
                 <li className="py-4">

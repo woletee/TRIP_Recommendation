@@ -29,7 +29,11 @@ const FooterLinks = [
   },
   {
     title: "Restaurants",
-    link: "/Restaurants",
+    link: "/restaurants",
+  },
+  {
+    title: "Hotels",
+    link: "/hotels",
   },
 ];
 
