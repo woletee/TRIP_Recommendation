@@ -3,6 +3,7 @@ import Hero from "../components/Hero/Hero";
 import NatureVid from "../assets/video/main.mp4";
 import BlogsComp from "../components/Blogs/BlogsComp";
 import Places from "../components/Places/Places";
+import Restaurants from "../components/Restaurant/Restaurants";
 import Testimonial from "../components/Team/Team";
 import Banner from "../components/Banner/Banner";
 import BannerPic from "../components/BannerPic/BannerPic";
@@ -31,6 +32,7 @@ const Home = () => {
           <Hero />
         </div>
         <Places handleOrderPopup={handleOrderPopup} />
+        <Restaurants handleOrderPopup={handleOrderPopup} />
         <BannerPic img={BannerImg} />
         <BlogsComp />
         <Banner />

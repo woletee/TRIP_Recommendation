@@ -10,6 +10,9 @@ export default {
         secondary: "#00c3c7",
         dark: "#ffcf22",
       },
+      spacing: {
+        '250': '250px',
+      },
       container: {
         center: true,
         padding: {
@@ -22,5 +25,19 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          /* Hide scrollbar for IE, Edge and Firefox */
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+          /* Hide scrollbar for Chrome, Safari and Opera */
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+        },
+      });
+    },
+  ],
 };

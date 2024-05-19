@@ -69,7 +69,6 @@ const Navbar = ({ handleOrderPopup }) => {
               <Link to={"/"} onClick={() => window.scrollTo(0, 0)}>
                 <img src={Logo} alt="" className="h-16" />
               </Link>
-              {/* <span>TCJ Tourism</span> */}
             </div>
             <div className="hidden md:block">
               <ul className="flex items-center gap-6 ">
@@ -131,14 +130,14 @@ const Navbar = ({ handleOrderPopup }) => {
               </ul>
             </div>
             <div className="flex items-center gap-4">
-              <button
+              {/* <button
                 className="bg-gradient-to-r from-primary to-secondary hover:bg-bg-gradient-to-r hover:from-secondary hover:bg-primary transition-all duration-600 text-white px-3 py-1 rounded-full"
                 onClick={() => {
                   handleOrderPopup();
                 }}
               >
                 Book Now
-              </button>
+              </button> */}
               {/* Mobile Hamburger icon */}
               <div className="md:hidden block">
                 {showMenu ? (

@@ -40,7 +40,7 @@ const PlaceCard = ({
             </div>
           </div>
         </div>
-      </div>
+      </div>   
     </>
   );
 };

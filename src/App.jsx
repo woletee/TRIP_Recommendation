@@ -8,7 +8,8 @@ import NoPage from "./pages/NoPage";
 import PlacesRoute from "./pages/PlacesRoute";
 import About from "./pages/About";
 import BlogsDetails from "./pages/BlogsDetails";
-import Restaurants from "./pages/Restaurants";
+import Restaurants from "./pages/Restaurants"
+import RestaurantDetail from "./pages/RestaurantDetail";
 import Hotels from "./pages/Hotel";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="blogs" element={<Blogs />} />
             <Route path="blogs/:id" element={<BlogsDetails />} />
             <Route path="restaurants" element={<Restaurants />} />
+            <Route path="restaurants/:id" element={<RestaurantDetail />} />
             <Route path="hotels" element={<Hotels />} />
             <Route path="best-places" element={<PlacesRoute />} />
             <Route path="about" element={<About />} />
