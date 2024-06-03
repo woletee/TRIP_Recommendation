@@ -1,0 +1,3 @@
+hotel_id,hotel_name,description,city,country,address,price,rating
+1,A.C.C Design Hotel,A modern hotel with stylish decor.,Gwangju,South Korea,"226-11, Geumnam-ro, Dong-gu, Gwangju 61482 South Korea",,4.0
+2,Dasomchae,A cozy hotel offering traditional Korean hospitality.,Gwangju,South Korea,"27, Naesang-ro 51beon-gil, Gwangsan-gu, Gwangju 62431 South Korea",,4.5

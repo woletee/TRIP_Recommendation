@@ -1,0 +1,6 @@
+hotel_id,hotel_name,description,city,country,address,price,rating
+1,A.C.C Design Hotel,A modern hotel with stylish decor.,Gwangju,South Korea,"226-11, Geumnam-ro, Dong-gu, Gwangju 61482 South Korea",,4.0
+2,Dasomchae,A cozy hotel offering traditional Korean hospitality.,Gwangju,South Korea,"27, Naesang-ro 51beon-gil, Gwangsan-gu, Gwangju 62431 South Korea",,4.5
+3,Brown Dot Hotel,A comfortable hotel in a convenient location.,Gwangju,South Korea,"5-8, Sangmujungang-ro 38beon-gil, Seo-gu, Gwangju 61963 South Korea",,3.5
+4,Empire Tourist Hotel,An affordable hotel for budget-conscious travelers.,Gwangju,South Korea,"25, Imbangul-daero 800beon-gil, Gwangsan-gu, Gwangju 62277 South Korea",,3.0
+5,CS Hotel,A hotel known for its excellent service.,Gwangju,South Korea,"128, Sangmupyeonghwa-ro, Seo-gu, Gwangju 61964 South Korea",,3.5

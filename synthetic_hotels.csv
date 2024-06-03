@@ -1,0 +1,51 @@
+hotel_id,hotel_name,address,city,country,description,price,rating
+h_1,Hotel_1,1 Main St,Los Angeles,USA,Description for Hotel_1,373.81,1.98
+h_2,Hotel_2,2 Main St,New York,USA,Description for Hotel_2,232.72,3.68
+h_3,Hotel_3,3 Main St,Miami,USA,Description for Hotel_3,372.65,4.89
+h_4,Hotel_4,4 Main St,Dallas,USA,Description for Hotel_4,286.25,2.33
+h_5,Hotel_5,5 Main St,Chicago,USA,Description for Hotel_5,365.61,1.01
+h_6,Hotel_6,6 Main St,Chicago,USA,Description for Hotel_6,489.15,1.92
+h_7,Hotel_7,7 Main St,Chicago,USA,Description for Hotel_7,404.76,3.75
+h_8,Hotel_8,8 Main St,New York,USA,Description for Hotel_8,371.61,3.29
+h_9,Hotel_9,9 Main St,Dallas,USA,Description for Hotel_9,328.91,2.84
+h_10,Hotel_10,10 Main St,Miami,USA,Description for Hotel_10,335.3,2.07
+h_11,Hotel_11,11 Main St,Miami,USA,Description for Hotel_11,249.96,4.23
+h_12,Hotel_12,12 Main St,Los Angeles,USA,Description for Hotel_12,363.34,1.16
+h_13,Hotel_13,13 Main St,New York,USA,Description for Hotel_13,116.66,1.13
+h_14,Hotel_14,14 Main St,Los Angeles,USA,Description for Hotel_14,487.36,2.19
+h_15,Hotel_15,15 Main St,New York,USA,Description for Hotel_15,446.44,4.21
+h_16,Hotel_16,16 Main St,Los Angeles,USA,Description for Hotel_16,315.78,4.84
+h_17,Hotel_17,17 Main St,New York,USA,Description for Hotel_17,240.64,1.25
+h_18,Hotel_18,18 Main St,Chicago,USA,Description for Hotel_18,64.26,2.31
+h_19,Hotel_19,19 Main St,Chicago,USA,Description for Hotel_19,452.54,4.89
+h_20,Hotel_20,20 Main St,Chicago,USA,Description for Hotel_20,335.66,2.36
+h_21,Hotel_21,21 Main St,Chicago,USA,Description for Hotel_21,272.89,1.11
+h_22,Hotel_22,22 Main St,Los Angeles,USA,Description for Hotel_22,410.24,2.38
+h_23,Hotel_23,23 Main St,Miami,USA,Description for Hotel_23,161.25,4.39
+h_24,Hotel_24,24 Main St,Los Angeles,USA,Description for Hotel_24,173.16,1.22
+h_25,Hotel_25,25 Main St,Los Angeles,USA,Description for Hotel_25,171.7,2.32
+h_26,Hotel_26,26 Main St,Miami,USA,Description for Hotel_26,252.62,4.92
+h_27,Hotel_27,27 Main St,New York,USA,Description for Hotel_27,128.14,2.21
+h_28,Hotel_28,28 Main St,Miami,USA,Description for Hotel_28,236.3,2.02
+h_29,Hotel_29,29 Main St,Dallas,USA,Description for Hotel_29,275.35,4.16
+h_30,Hotel_30,30 Main St,Los Angeles,USA,Description for Hotel_30,174.92,3.17
+h_31,Hotel_31,31 Main St,Los Angeles,USA,Description for Hotel_31,115.89,3.52
+h_32,Hotel_32,32 Main St,Chicago,USA,Description for Hotel_32,218.29,3.85
+h_33,Hotel_33,33 Main St,Miami,USA,Description for Hotel_33,481.34,3.53
+h_34,Hotel_34,34 Main St,Dallas,USA,Description for Hotel_34,305.72,4.18
+h_35,Hotel_35,35 Main St,Miami,USA,Description for Hotel_35,138.1,1.68
+h_36,Hotel_36,36 Main St,Los Angeles,USA,Description for Hotel_36,60.59,4.06
+h_37,Hotel_37,37 Main St,New York,USA,Description for Hotel_37,150.39,4.53
+h_38,Hotel_38,38 Main St,Miami,USA,Description for Hotel_38,115.33,2.08
+h_39,Hotel_39,39 Main St,New York,USA,Description for Hotel_39,280.39,3.37
+h_40,Hotel_40,40 Main St,Dallas,USA,Description for Hotel_40,71.56,4.68
+h_41,Hotel_41,41 Main St,Miami,USA,Description for Hotel_41,138.09,3.91
+h_42,Hotel_42,42 Main St,Dallas,USA,Description for Hotel_42,355.29,2.25
+h_43,Hotel_43,43 Main St,Chicago,USA,Description for Hotel_43,262.58,4.17
+h_44,Hotel_44,44 Main St,Dallas,USA,Description for Hotel_44,171.79,4.24
+h_45,Hotel_45,45 Main St,Chicago,USA,Description for Hotel_45,375.95,1.67
+h_46,Hotel_46,46 Main St,Miami,USA,Description for Hotel_46,222.64,3.23
+h_47,Hotel_47,47 Main St,Chicago,USA,Description for Hotel_47,346.04,4.32
+h_48,Hotel_48,48 Main St,Dallas,USA,Description for Hotel_48,467.49,1.18
+h_49,Hotel_49,49 Main St,Dallas,USA,Description for Hotel_49,187.41,1.13
+h_50,Hotel_50,50 Main St,New York,USA,Description for Hotel_50,185.05,1.9

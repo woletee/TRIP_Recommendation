@@ -1,0 +1,101 @@
+user_id,age,gender,preferred_location,preferred_hotel_type
+u_1,66,M,mountain,luxury
+u_2,42,M,beach,luxury
+u_3,38,M,mountain,luxury
+u_4,58,M,beach,boutique
+u_5,42,F,beach,luxury
+u_6,21,F,city center,budget
+u_7,32,F,countryside,boutique
+u_8,66,M,countryside,luxury
+u_9,67,M,beach,boutique
+u_10,54,F,countryside,luxury
+u_11,42,F,city center,luxury
+u_12,62,F,city center,budget
+u_13,52,F,beach,luxury
+u_14,39,F,countryside,budget
+u_15,20,M,beach,luxury
+u_16,19,M,city center,budget
+u_17,19,M,city center,boutique
+u_18,29,F,countryside,budget
+u_19,54,M,city center,budget
+u_20,34,M,countryside,budget
+u_21,37,M,countryside,luxury
+u_22,23,F,city center,boutique
+u_23,66,M,city center,luxury
+u_24,52,M,beach,budget
+u_25,54,M,countryside,boutique
+u_26,30,F,beach,luxury
+u_27,32,M,city center,luxury
+u_28,29,F,city center,boutique
+u_29,50,F,countryside,luxury
+u_30,54,F,beach,boutique
+u_31,33,M,beach,budget
+u_32,25,F,beach,luxury
+u_33,52,F,mountain,budget
+u_34,44,M,countryside,budget
+u_35,27,F,beach,boutique
+u_36,48,F,city center,budget
+u_37,64,F,city center,budget
+u_38,30,F,beach,budget
+u_39,19,M,beach,boutique
+u_40,69,M,city center,boutique
+u_41,39,F,city center,budget
+u_42,53,M,countryside,boutique
+u_43,52,M,mountain,budget
+u_44,34,M,beach,luxury
+u_45,55,F,city center,luxury
+u_46,51,M,mountain,boutique
+u_47,26,F,mountain,luxury
+u_48,38,F,city center,budget
+u_49,26,M,beach,boutique
+u_50,35,F,mountain,budget
+u_51,30,M,city center,boutique
+u_52,51,M,countryside,boutique
+u_53,70,F,mountain,luxury
+u_54,18,M,countryside,budget
+u_55,44,M,beach,boutique
+u_56,37,F,beach,luxury
+u_57,33,M,mountain,boutique
+u_58,36,M,countryside,luxury
+u_59,48,F,beach,budget
+u_60,20,M,mountain,luxury
+u_61,33,F,countryside,budget
+u_62,43,M,countryside,boutique
+u_63,54,F,beach,budget
+u_64,43,F,beach,luxury
+u_65,29,M,beach,boutique
+u_66,59,F,beach,budget
+u_67,47,M,city center,budget
+u_68,32,M,countryside,boutique
+u_69,37,M,mountain,boutique
+u_70,18,F,beach,boutique
+u_71,59,M,city center,boutique
+u_72,53,M,city center,budget
+u_73,43,M,beach,luxury
+u_74,65,M,beach,boutique
+u_75,52,M,city center,luxury
+u_76,42,F,beach,luxury
+u_77,56,F,beach,budget
+u_78,20,F,countryside,budget
+u_79,34,M,mountain,boutique
+u_80,57,F,beach,luxury
+u_81,70,F,countryside,luxury
+u_82,41,M,countryside,luxury
+u_83,34,M,beach,budget
+u_84,52,M,countryside,luxury
+u_85,53,M,countryside,boutique
+u_86,45,M,city center,boutique
+u_87,69,F,city center,luxury
+u_88,52,F,beach,luxury
+u_89,29,F,beach,boutique
+u_90,25,F,countryside,budget
+u_91,65,M,beach,budget
+u_92,45,M,city center,budget
+u_93,60,F,city center,boutique
+u_94,46,F,beach,budget
+u_95,27,M,city center,boutique
+u_96,60,F,mountain,boutique
+u_97,67,F,beach,boutique
+u_98,34,F,beach,boutique
+u_99,35,F,city center,budget
+u_100,63,M,countryside,boutique

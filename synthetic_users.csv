@@ -1,0 +1,101 @@
+user_id,age,gender,preferred_location,preferred_hotel_type
+1,19,F,city center,budget
+2,48,M,beach,luxury
+3,47,F,city center,luxury
+4,54,M,countryside,budget
+5,24,F,beach,luxury
+6,30,M,mountain,boutique
+7,23,M,countryside,luxury
+8,30,M,mountain,budget
+9,21,M,city center,boutique
+10,41,M,city center,luxury
+11,22,F,beach,budget
+12,47,F,city center,budget
+13,32,F,mountain,budget
+14,67,M,mountain,boutique
+15,49,M,beach,boutique
+16,34,M,countryside,boutique
+17,19,M,mountain,luxury
+18,19,M,city center,budget
+19,60,M,mountain,luxury
+20,48,F,city center,boutique
+21,18,M,mountain,budget
+22,51,F,beach,budget
+23,44,M,countryside,boutique
+24,34,F,beach,luxury
+25,53,M,city center,budget
+26,19,F,countryside,boutique
+27,59,M,city center,budget
+28,29,M,beach,luxury
+29,33,M,countryside,boutique
+30,27,M,countryside,budget
+31,20,M,city center,luxury
+32,53,M,city center,boutique
+33,42,M,beach,luxury
+34,68,M,beach,luxury
+35,18,F,mountain,budget
+36,25,F,mountain,budget
+37,39,M,countryside,boutique
+38,42,M,countryside,luxury
+39,27,F,mountain,boutique
+40,32,M,city center,budget
+41,35,M,countryside,boutique
+42,43,M,countryside,boutique
+43,53,M,countryside,luxury
+44,28,M,city center,budget
+45,30,M,countryside,budget
+46,59,M,beach,boutique
+47,28,F,mountain,luxury
+48,24,F,city center,budget
+49,36,F,mountain,luxury
+50,61,M,city center,boutique
+51,22,M,mountain,luxury
+52,58,F,city center,budget
+53,40,F,beach,boutique
+54,44,F,city center,budget
+55,38,F,countryside,budget
+56,53,M,city center,luxury
+57,29,F,countryside,boutique
+58,23,M,countryside,boutique
+59,63,M,countryside,luxury
+60,48,M,city center,boutique
+61,40,M,countryside,boutique
+62,27,F,countryside,luxury
+63,52,M,countryside,luxury
+64,19,M,mountain,boutique
+65,65,M,mountain,boutique
+66,23,F,countryside,luxury
+67,46,M,countryside,luxury
+68,63,F,countryside,boutique
+69,40,F,countryside,budget
+70,31,F,countryside,boutique
+71,24,F,beach,boutique
+72,36,F,countryside,boutique
+73,47,F,city center,budget
+74,47,M,countryside,boutique
+75,20,F,countryside,budget
+76,19,F,beach,boutique
+77,26,F,city center,boutique
+78,38,M,mountain,boutique
+79,65,M,countryside,boutique
+80,33,F,countryside,luxury
+81,28,F,mountain,boutique
+82,58,F,city center,budget
+83,60,F,beach,boutique
+84,66,M,city center,budget
+85,25,F,beach,luxury
+86,62,F,city center,luxury
+87,57,M,countryside,boutique
+88,49,F,beach,boutique
+89,54,M,city center,boutique
+90,47,M,beach,boutique
+91,40,F,countryside,luxury
+92,57,F,countryside,budget
+93,69,M,city center,budget
+94,47,F,mountain,luxury
+95,41,F,countryside,luxury
+96,46,F,city center,budget
+97,37,F,beach,boutique
+98,34,M,countryside,budget
+99,37,F,beach,budget
+100,27,F,countryside,budget

@@ -1,0 +1,222 @@
+hotel_id,hotel_name,address,city,country,description,created_at,price,rating,formatted_hotel_id,hotell_id
+1,A.C.C Design Hotel,"226-11, Geumnam-ro, Dong-gu, Gwangju 61482 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$222,4.0,,h_1
+2,Dasomchae,"27, Naesang-ro 51beon-gil, Gwangsan-gu, Gwangju 62431 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$97,4.5,,h_2
+3,Brown Dot Hotel Gwangju Sangmo,"5-8, Sangmujungang-ro 38beon-gil, Seo-gu, Gwangju 61963 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$167,3.5,,h_3
+4,Empire Tourist Hotel,"25, Imbangul-daero 800beon-gil, Gwangsan-gu, Gwangju 62277 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$242,3.0,,h_4
+5,CS Hotel,"128, Sangmupyeonghwa-ro, Seo-gu, Gwangju 61964 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$373,3.5,,h_5
+6,Madrid Business Hotel,"11, Gwangsan-ro 19beon-gil, Gwangsan-gu, Gwangju 62430 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$301,4.0,,h_6
+7,UTOP Boutique Hotel & Residence,"53, Sicheng-ro, Seo-gu, Gwangju 61949 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$245,4.0,,h_7
+8,"Holiday Inn Gwangju, Korea, an IHG Hotel","55, Sangmunuri-ro, Seo-gu Seo-Gu, Gwangju 61955 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$409,4.0,,h_8
+9,Hotel The May,"51, Sangmubeonyeong-ro, Seo-gu, Gwangju 61948 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$59,4.5,,h_9
+10,FNT Hotel,"31 Sangmuyeonha-ro, Seo-gu, Gwangju 61963 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$261,4.5,,h_10
+11,Dubai Hotel,"47, Sangmubeonyeong-ro, Seo-gu, Gwangju 61948 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$327,4.5,,h_11
+12,Ramada Plaza Gwangju,"149, Sangmujayu-ro, Seo-gu, Gwangju 61949 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$292,4.0,,h_12
+13,Boutique Hotel Wine,"140 Sangmupyeonghwa-ro, Seo-gu, Gwangju 61964 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$342,4.0,,h_13
+14,Tourist Hotel Masters,"46, Sangmuyeonha-ro, Seo-gu, Gwangju 61949 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$137,3.0,,h_14
+15,Biennale Motel,"104, Daeja-ro, Buk-gu, Gwangju 61262 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$120,3.5,,h_15
+16,Noble Stay Hotel,"19-7, Imbangul-daero 826beon-gil, Gwangsan-gu, Gwangju 62279 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$138,3.0,,h_16
+17,Hotel The Spot,"32, Amkor-ro, Buk-gu, Gwangju 61009 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$446,4.5,,h_17
+18,Hotel B,"6, Sicheong-ro 60beon-gil, Seo-gu, Gwangju 61948 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$364,4.5,,h_18
+19,Gwangju Palace Tourist Hotel,"13, Jungang-ro 160beon-gil, Dong-gu, Gwangju 61483 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$243,3.0,,h_19
+20,MVP Business Hotel,"14-5, Mujin-daero 212beon-gil, Gwangsan-gu, Gwangju 62363 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$89,5.0,,h_20
+21,New Gwangju Guesthouse,"9, Seoam-daero 289beon-gil, Buk-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$137,3.5,,h_21
+22,Business Hotel Venture,"5-6, Sangmujungang-ro 38beon-gil, Seo-gu, Gwangju 61963 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$224,3.5,,h_22
+23,Green Guest House,"15, Gyeongyang-ro 63beon-gil, Buk-gu, Gwangju 61249 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$138,5.0,,h_23
+24,Byulbam Guesthouse,"8-6, Gyeongyang-ro 147beon-gil, Buk-gu, Gwangju 61237 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$387,5.0,,h_24
+25,Top Cloud Hotel,"57-1, Imbangul-daero 825beon-gil, Gwangsan-gu, Gwangju 62275 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$215,5.0,,h_25
+26,Nox Hotel,"22, Sangmujungang-ro 78beon-gil, Seo-gu, Gwangju 61949 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$75,4.0,,h_26
+27,Ballantine Business Hotel,"11, Jukbong-daero 78beon-gil, Seo-gu, Gwangju 61932 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$383,4.0,,h_27
+28,S Hotel,"Saraselmotel 103 Sangmupyeonghwa-ro, Gwangju 61963 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$122,4.0,,h_28
+29,Elysee Hotel,"60-41, Imbangul-daero 826beon-gil, Gwangsan-gu, Gwangju 62277 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$315,4.0,,h_29
+30,Business Hotel France,"21-6, Sicheong-ro 20beon-gil, Seo-gu, Gwangju 61964 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$454,3.5,,h_30
+31,Duzon Hotel,"60-37, Imbangul-daero 826beon-gil, Gwangsan-gu, Gwangju 62277 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$165,3.5,,h_31
+32,Pedro's House,"42, World cup 4gang-ro 181beon-gil, Seo-gu, Gwangju 61968 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$293,4.5,,h_32
+33,Oxbloodk,"24-1, Naebang-ro 398beon-gil, Seo-gu, Gwangju 61934 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$247,5.0,,h_33
+34,Geumsoojang Tourist Hotel,"2, Mudeung-ro 321beon-gil, Dong-gu, Gwangju 61401 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$385,4.0,,h_34
+35,Misori Guesthouse,"14-1, Dongmyeong-ro 67beon-gil, Dong-gu, Gwangju 61432 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$481,5.0,,h_35
+36,Prado Hotel,"19, Dongnip-ro, Nam-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$498,3.5,,h_36
+37,Praha Guesthoustel,"15, Hanam-daero 832beon-gil, Buk-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$388,4.5,,h_37
+38,Hotel Stay 53,"6, Sangmuyeonha-ro, Seo-gu, Gwangju 61963 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$149,4.5,,h_38
+39,Gukje Business Hotel,"8, Bongseon-ro, Nam-gu, Gwangju 61697 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$227,4.0,,h_39
+40,Panda Guesthouse,"102, Jebong-ro, Dong-gu 3f, Gwangju 61465 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$293,4.5,,h_40
+41,Bentley Hotel,"5, Seoseok-ro 10beon-gil, Dong-gu, Gwangju 61488 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$335,3.5,,h_41
+42,Gwangju Backpackers,"181-3, Pilmun-daero, Dong-gu, Gwangju 61437 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$197,4.0,,h_42
+43,Zaza House,"4, Jukbong-daero 97beon-gil, Seo-gu, Gwangju 61915 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$197,3.5,,h_43
+44,Namdo Hostel,"21, World cup 4gang-ro 182beon-gil, Gwangju 61976 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$448,5.0,,h_44
+45,Oasita Hostel,"20, Dongmyeong-ro 20beon-gil, Dong-gu, Gwangju 61434 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$473,3.5,,h_45
+46,Athene Hotel,"Atene 156 Sangmupyeonghwa-ro, Gwangju 61964 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$338,4.0,,h_46
+47,Manhattan Hotel,"73, Sangmuyeonha-ro, Seo-gu, Gwangju 61949 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$499,3.5,,h_47
+48,Sangmu Motel,"46, Ssangchon-ro 65beon-gil, Seo-gu, Gwangju 61990 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$315,3.5,,h_48
+49,Windmill Motel,"150-8, Jungang-ro, Dong-gu, Gwangju 61484 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$235,3.0,,h_49
+50,Hotel Mudeung Park,"Jisan Dong 63 1 San, Gwangju 61447 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$177,2.5,,h_50
+51,Gwangju Sejong Hotel,"30, Gyeongyang-ro 165beon-gil, Buk-gu, Gwangju 61237 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$82,2.5,,h_51
+52,Havana Hotel,"20, Sangmujungang-ro 78beon-gil, Seo-gu, Gwangju 61949 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$81,2.5,,h_52
+53,Chocolate Hotel,"837, Sangmu-daero, Seo-gu, Gwangju 61964 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$252,2.5,,h_53
+54,Hotel Good Choice Chungjangro,"3, Seoseok-ro 7beon-gil, Dong-gu, Gwangju 61484 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$294,2.0,,h_54
+55,Our Youth Hotel,"Munhwajeondang-ro 23beon-gil 12-1 Dong-gu, Gwangju 61487 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$201,2.5,,h_55
+56,Plus Motel,"9-11, Cheonbyeonu-ro 271beon-gil, Buk-gu, Gwangju 61241 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$213,1.0,,h_56
+57,Hotel Seattle,"93-2, Sangmupyeonghwa-ro, Seo-gu, Gwangju, Gwangju 61963 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$420,-1.0,,h_57
+58,Prince Motel,"555-36, Usan-dong, Buk-gu, Gwangju 500-850 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$233,-1.0,,h_58
+59,E Motel,"33-1, Bungmun-daero 19beon-gil, Buk-gu, Gwangju 61262 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$78,-1.0,,h_59
+60,Sky Motel,"9-7, Dongmun-daero, Buk-gu, Gwangju 61215 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$340,-1.0,,h_60
+61,Hotel The Lua,"3-10, Munhwajeondang-ro 35beon-gil, Dong-gu, Gwangju 61487 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$178,-1.0,,h_61
+62,Bobos Motel,"483-4, Cheonbyeonu-ro, Dong-gu, Gwangju 61489 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$178,-1.0,,h_62
+63,Top Castle Hotel,"16-14, Seoseok-ro 7beon-gil, Dong-gu, Gwangju 61484 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$470,-1.0,,h_63
+64,Design Motel I,"393-4, Cheonbyeonu-ro, Dong-gu, Gwangju 61484 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$103,-1.0,,h_64
+65,Tiffany Motel,"401-5, Cheonbyeonu-ro, Dong-gu, Gwangju 61484 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$439,-1.0,,h_65
+66,Wa Motel,"270-5, Gyeongyeol-ro, Buk-gu, Gwangju 61237 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$88,-1.0,,h_66
+67,Hotel Yaja Gwangju Chungjang-ro,"16-21, Jungang-ro 160beon-gil, Dong-gu, Gwangju 61484 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$294,-1.0,,h_67
+68,I Am Guesthouse Gwangju,"23, Gyeongyang-ro 165beon-gil, Buk-gu, Gwangju 61237 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$323,-1.0,,h_68
+69,Hotel Making,"8, Sangmuyeonha-ro, Seo-gu, Gwangju 61963 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$385,-1.0,,h_69
+70,Shine Hotel,"48, Sangmuyeonha-ro, Seo-gu 9f, Gwangju 61949 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$438,-1.0,,h_70
+71,Zeus Motel,"82-3, Taebong-ro, Buk-gu, Gwangju 61252 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$155,-1.0,,h_71
+72,V Hotel,"15, Yongdutaekji-ro, Buk-gu, Gwangju 61023 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$92,-1.0,,h_72
+73,Sunshine Motel,"4-24, Geumhwa-ro 85beon-gil, Seo-gu, Gwangju 62006 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$492,-1.0,,h_73
+74,Ilbeonji Hotel,"17-16, Cheomdanjungang-ro 152beon-gil, Gwangsan-gu, Gwangju 62274 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$81,-1.0,,h_74
+75,M Motel,"14-19, Mujin-daero 212beon-gil, Gwangsan-gu, Gwangju 62363 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$426,-1.0,,h_75
+76,Kimnetgwa,"13, Guseong-ro 204beon-gil, Dong-gu, Gwangju 61473 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$307,-1.0,,h_76
+77,Cheomdan Hotel,"47, Cheomdanjungang-ro 152beon-gil, Gwangsan-gu, Gwangju 62274 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$371,-1.0,,h_77
+78,Hotel Love Story,"38, Mudeung-ro 218beon-gil, Buk-gu, Gwangju 61251 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$475,-1.0,,h_78
+79,Urban Stay,"7, Mujin-daero 232beon-gil, Gwangsan-gu, Gwangju 62363 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$107,-1.0,,h_79
+80,Joa Guest House,"52, Sindosan-gil, Gwangsan-gu, Gwangju 62437 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$341,-1.0,,h_80
+81,Yahoo Motel,"5-12, Dongnip-ro, Nam-gu, Gwangju 61656 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$408,-1.0,,h_81
+82,Royal Motel,"5, Geumhwa-ro 422beon-gil, Nam-gu, Gwangju 61612 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$169,-1.0,,h_82
+83,Incheon Outback Guest House,"12, Jubuto-ro, Bupyeong-gu Unit#906, Two M castle, Gwangju 21393 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$317,1.5,,h_83
+84,Mudeungsan Jeungsimsa Templestay,"177, Jeungsimsa-gil, Dong-gu Jeungsimsa Templestay, Gwangju 61493 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$480,-1.0,,h_84
+85,White House Motel,"380, Daenam-daero, Nam-gu White House Motel, Gwangju 61617 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$132,-1.0,,h_85
+86,Raindeer Motel,"1218-2, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$141,-1.0,,h_86
+87,Twins Motel,"969-19, Ssangchon-dong, Seo-gu, Gwangju 502-820 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$434,-1.0,,h_87
+88,Oasis,"1231-6, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$448,-1.0,,h_88
+89,Agnes Motel,"1141-18, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$149,-1.0,,h_89
+90,Lorelei Motel,"1243-4, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$103,-1.0,,h_90
+91,Green Motel,"982-8, Ssangchon-dong, Seo-gu, Gwangju 502-856 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$446,-1.0,,h_91
+92,Eve Motel,"43-5, Yang-dong, Seo-gu, Gwangju 502-823 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$171,-1.0,,h_92
+93,Chanel Motel,"23-254, Hwajeong-dong, Seo-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$476,-1.0,,h_93
+94,Agape Motel,"761-7, Geumho-dong, Seo-gu, Gwangju 502-806 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$134,-1.0,,h_94
+95,Valensia Motel,"1255-6, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$253,-1.0,,h_95
+96,Sunshine Motel,"762-8, Geumho-dong, Seo-gu, Gwangju 502-806 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$374,-1.0,,h_96
+97,Swiss Motel,"795-4, Geumho-dong, Seo-gu, Gwangju 502-858 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$312,-1.0,,h_97
+98,Piano Motel,"795-12, Geumho-dong, Seo-gu, Gwangju 502-858 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$97,-1.0,,h_98
+99,Angel Motel,"1114-8, Oryong-dong, Buk-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$177,-1.0,,h_99
+100,Twin Motel,"569-4, Dooam-dong, Buk-gu, Gwangju 500-100 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$181,-1.0,,h_100
+101,Global Motel,"687-3, Ssangam-dong, Gwangsan-gu, Gwangju 506-303 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$406,-1.0,,h_101
+102,Arirang Motel,"667-6, Ssangam-dong, Gwangsan-gu, Gwangju 506-303 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$230,-1.0,,h_102
+103,Greece Motel,"871-1, Wolgye-dong, Gwangsan-gu, Gwangju 506-824 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$384,-1.0,,h_103
+104,Hedges Motel,"685-14, Ssangam-dong, Gwangsan-gu, Gwangju 506-303 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$193,-1.0,,h_104
+105,Kay Motel,"685-13, Ssangam-dong, Gwangsan-gu, Gwangju 506-303 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$198,-1.0,,h_105
+106,Koreana Motel,"1606-18, Usan-dong, Gwangsan-gu, Gwangju 506-813 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$277,-1.0,,h_106
+107,Sped Motel,"1125-12, Songjeong-dong, Gwangsan-gu, Gwangju 506-010 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$492,-1.0,,h_107
+108,Cool Motel,"668-4, Ssangam-dong, Gwangsan-gu, Gwangju 506-303 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$329,-1.0,,h_108
+109,Dain Motel,"880-1, Wolgye-dong, Gwangsan-gu, Gwangju 506-824 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$257,-1.0,,h_109
+110,Choice Motel,"878-3, Wolgye-dong, Gwangsan-gu, Gwangju 506-824 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$447,-1.0,,h_110
+111,Galaxy Motel,"882-5, Wolgye-dong, Gwangsan-gu, Gwangju 506-824 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$423,-1.0,,h_111
+112,Eve Motel,"887-7, Wolgye-dong, Gwangsan-gu, Gwangju 506-824 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$391,-1.0,,h_112
+113,Top Motel,"1609-5, Usan-dong, Gwangsan-gu, Gwangju 506-813 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$98,-1.0,,h_113
+114,Bali Motel,"1609-10, Usan-dong, Gwangsan-gu, Gwangju 506-813 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$355,-1.0,,h_114
+115,Star Motel,"1001-1, Songjeong-dong, Gwangsan-gu, Gwangju 506-010 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$119,-1.0,,h_115
+116,Bae Nang Guesthouse & Hostel,"12, Baekseo-ro 189beon-gil, Dong-gu 2F, Gwangju 61466 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$219,-1.0,,h_116
+117,Kimnetgwa,"13, Guseong-ro 204beon-gil, Dong-gu, Gwangju 61473 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$213,-1.0,,h_117
+118,Regent Hotel,"86-4, Bungmun-daero, Buk-gu, Gwangju 61100 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$498,-1.0,,h_118
+119,W Motel,"20, Sangmujungang-ro 38beon-gil, Seo-gu, Gwangju 61963 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$145,-1.0,,h_119
+120,Cheomdan Hotel,"47, Cheomdanjungang-ro 152beon-gil, Gwangsan-gu, Gwangju 62274 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$247,-1.0,,h_120
+121,Gwangju View Home,"25-3, Seodanggol-gil, Nam-gu, Gwangju 61635 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$144,-1.0,,h_121
+122,I Win Motel,"41-2, Soogi-dong, Dong-gu, Gwangju 501-100 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$306,-1.0,,h_122
+123,Hertz Guesthouse,"18, Jebong-ro 110beon-gil, Dong-gu, Gwangju 61436 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$419,-1.0,,h_123
+124,Shinsung Hotel Cheomdan,"47, Cheomdanjungang-ro 152beon-gil, Gwangsan-gu, Gwangju 62274 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$228,-1.0,,h_124
+125,Cinema Motel,"133-9, Sinan-dong, Buk-gu, Gwangju 500-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$342,-1.0,,h_125
+126,Juliet Motel,"1220-5, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$468,-1.0,,h_126
+127,Hotel Love Story,"38, Mudeung-ro 218beon-gil, Buk-gu, Gwangju 61251 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$354,-1.0,,h_127
+128,Joa Guest House,"52, Sindosan-gil, Gwangsan-gu, Gwangju 62437 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$399,-1.0,,h_128
+129,Amor Motel,"971-15, Ssangchon-dong, Seo-gu, Gwangju 502-820 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$437,-1.0,,h_129
+130,Hotel View,"28, Amkor-ro, Buk-gu, Gwangju 61009 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$148,-1.0,,h_130
+131,Yahoo Motel,"5-12, Dongnip-ro, Nam-gu, Gwangju 61656 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$92,-1.0,,h_131
+132,Milano Motel,"679-2, Ssangam-dong, Gwangsan-gu, Gwangju 506-303 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$418,-1.0,,h_132
+133,Royal Motel,"5, Geumhwa-ro 422beon-gil, Nam-gu, Gwangju 61612 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$455,-1.0,,h_133
+134,Manhattan,"1577-8, Wusan-dong, Gwangsan-gu, Gwangju 506-813 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$251,-1.0,,h_134
+135,Cherry Motel,"1237-2, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$433,-1.0,,h_135
+136,Love House,"974-1, Ssangchon-dong, Seo-gu, Gwangju 502-820 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$50,-1.0,,h_136
+137,Regent Motel,"971-29, Ssangchon-dong, Seo-gu, Gwangju 502-820 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$444,-1.0,,h_137
+138,Robles Motel,"23-263, Hwajeong-dong, Seo-gu, Gwangju 502-240 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$420,-1.0,,h_138
+139,Palace Motel,"974-14, Ssangchon-dong, Seo-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$93,-1.0,,h_139
+140,Sheraton,"1217-2, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$492,-1.0,,h_140
+141,Chunji Motel,"1606-1, Wusan-dong, Gwangsan-gu, Gwangju 506-813 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$433,-1.0,,h_141
+142,Hwangtobang Motel,"33-15, Gwangcheon-dong, Seo-gu, Gwangju 502-800 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$73,-1.0,,h_142
+143,Nice Motel,"955-32, Ssangchon-dong, Seo-gu, Gwangju 502-817 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$237,-1.0,,h_143
+144,Hamilton Motel,"1218-6, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$180,-1.0,,h_144
+145,Liz Motel,"23-317, Hwajeong-dong, Seo-gu, Gwangju 502-240 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$427,-1.0,,h_145
+146,Raindeer Motel,"1218-2, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$148,-1.0,,h_146
+147,Twins Motel,"969-19, Ssangchon-dong, Seo-gu, Gwangju 502-820 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$112,-1.0,,h_147
+148,Oasis,"1231-6, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$469,-1.0,,h_148
+149,Agnes Motel,"1141-18, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$272,-1.0,,h_149
+150,Lorelei Motel,"1243-4, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$173,-1.0,,h_150
+151,Green Motel,"982-8, Ssangchon-dong, Seo-gu, Gwangju 502-856 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$132,-1.0,,h_151
+152,Eve Motel,"43-5, Yang-dong, Seo-gu, Gwangju 502-823 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$480,-1.0,,h_152
+153,Chanel Motel,"23-254, Hwajeong-dong, Seo-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$277,-1.0,,h_153
+154,Agape Motel,"761-7, Geumho-dong, Seo-gu, Gwangju 502-806 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$198,-1.0,,h_154
+155,Valensia Motel,"1255-6, Chipyeong-dong, Seo-gu, Gwangju 502-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$259,-1.0,,h_155
+156,Hotel Seattle,"93-2, Sangmupyeonghwa-ro, Seo-gu, Gwangju, Gwangju 61963 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$100,-1.0,,h_156
+157,Sunshine Motel,"762-8, Geumho-dong, Seo-gu, Gwangju 502-806 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$461,-1.0,,h_157
+158,Swiss Motel,"795-4, Geumho-dong, Seo-gu, Gwangju 502-858 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$320,-1.0,,h_158
+159,Piano Motel,"795-12, Geumho-dong, Seo-gu, Gwangju 502-858 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$91,-1.0,,h_159
+160,Angel Motel,"1114-8, Oryong-dong, Buk-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$108,-1.0,,h_160
+161,Twin Motel,"569-4, Dooam-dong, Buk-gu, Gwangju 500-100 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$243,-1.0,,h_161
+162,Eros Motel,"1366-5, Yongbong-dong, Buk-gu, Gwangju 500-846 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$86,-1.0,,h_162
+163,Renaissance Motel,"1365-14, Yongbong-dong, Buk-gu, Gwangju 500-846 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$316,-1.0,,h_163
+164,Millenium Motel,"1114-1, Oryong-dong, Buk-gu, Gwangju 500-480 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$136,-1.0,,h_164
+165,Agens Motel,"1365-13, Yongbong-dong, Buk-gu, Gwangju 500-846 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$93,-1.0,,h_165
+166,Clover Motel,"137-4, Shinan-dong, Buk-gu, Gwangju 500-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$410,-1.0,,h_166
+167,Saeromm Motel,"856-39, Ochi-dong, Buk-gu, Gwangju 500-130 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$61,-1.0,,h_167
+168,Orange Motel,"137-11, Shinan-dong, Buk-gu, Gwangju 500-827 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$308,-1.0,,h_168
+169,Venetia Motel,"876-30, Munheung-dong, Buk-gu, Gwangju 500-110 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$357,-1.0,,h_169
+170,Yeri Motel,"450-4, Unam-dong, Buk-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$130,-1.0,,h_170
+171,Motel Icheon,"568-1, Duam-dong, Buk-gu, Gwangju 500-100 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$82,-1.0,,h_171
+172,Papillon Motel,"876-31, Munheung-dong, Buk-gu, Gwangju 500-110 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$232,-1.0,,h_172
+173,Prince Motel,"555-36, Usan-dong, Buk-gu, Gwangju 500-850 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$178,-1.0,,h_173
+174,Sky Motel,"1621-1, Unam-dong, Buk-gu, Gwangju 500-859 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$344,-1.0,,h_174
+175,Leaders Motel,"97-33, Unam-dong, Buk-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$325,-1.0,,h_175
+176,Ramada Plaza Gwangju,"149, Sangmujayu-ro, Seo-gu, Gwangju 61949 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$224,4.0,,h_176
+177,Pedro's House,"42, World cup 4gang-ro 181beon-gil, Seo-gu, Gwangju 61968 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$92,4.5,,h_177
+178,Oxbloodk,"24-1, Naebang-ro 398beon-gil, Seo-gu, Gwangju 61934 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$421,5.0,,h_178
+179,Geumsoojang Tourist Hotel,"2, Mudeung-ro 321beon-gil, Dong-gu, Gwangju 61401 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$234,4.0,,h_179
+180,Hotel The May,"51, Sangmubeonyeong-ro, Seo-gu, Gwangju 61948 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$494,4.5,,h_180
+181,Misori Guesthouse,"14-1, Dongmyeong-ro 67beon-gil, Dong-gu, Gwangju 61432 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$127,5.0,,h_181
+182,Prado Hotel,"19, Dongnip-ro, Nam-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$336,3.5,,h_182
+183,Benikea Hotel Art Hall,"2, Sicheong-ro 20beon-gil, Gwangju 61964 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$330,3.5,,h_183
+184,Shin Yang Park Hotel,"214-7, Jiho-ro, Dong-gu, Gwangju 61447 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$175,3.5,,h_184
+185,Praha Guesthoustel,"15, Hanam-daero 832beon-gil, Buk-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$308,4.5,,h_185
+186,Nox Hotel,"22, Sangmujungang-ro 78beon-gil, Seo-gu, Gwangju 61949 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$53,4.0,,h_186
+187,Ballantine Business Hotel,"11, Jukbong-daero 78beon-gil, Seo-gu, Gwangju 61932 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$144,4.0,,h_187
+188,Guesthouse Loco,"23-4, Jukbong-daero 38beon-gil, Seo-gu, Gwangju 61934 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$276,4.5,,h_188
+189,Bentley Hotel,"5, Seoseok-ro 10beon-gil, Dong-gu, Gwangju 61488 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$413,3.5,,h_189
+190,The Lounge,"93-5, Chungjang-ro, Dong-gu, Gwangju 501-822 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$319,5.0,,h_190
+191,Banana Hotel,"22-13, Imbangul-daero 825beon-gil, Gwangsan-gu, Gwangju 62278 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$418,4.5,,h_191
+192,Business Hotel France,"21-6, Sicheong-ro 20beon-gil, Seo-gu, Gwangju 61964 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$346,3.5,,h_192
+193,Byulbam Guesthouse,"8-6, Gyeongyang-ro 147beon-gil, Buk-gu, Gwangju 61237 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$378,5.0,,h_193
+194,CS Hotel,"128, Sangmupyeonghwa-ro, Seo-gu, Gwangju 61964 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$69,3.5,,h_194
+195,Horanggasinamu Hill Guesthouse,"20, Jejung-ro 47beon-gil, Nam-gu, Gwangju 61643 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$145,4.0,,h_195
+196,Gwangju Backpackers,"181-3, Pilmun-daero, Dong-gu, Gwangju 61437 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$378,4.0,,h_196
+197,Gwangju Prince Hotel‎,"65-8 Unam-dong, Buk-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$460,5.0,,h_197
+198,Green Guest House,"15, Gyeongyang-ro 63beon-gil, Buk-gu, Gwangju 61249 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$298,5.0,,h_198
+199,Zaza House,"4, Jukbong-daero 97beon-gil, Seo-gu, Gwangju 61915 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$230,3.5,,h_199
+200,Gwangju Palace Tourist Hotel,"13, Jungang-ro 160beon-gil, Dong-gu, Gwangju 61483 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$373,3.0,,h_200
+201,MVP Business Hotel,"14-5, Mujin-daero 212beon-gil, Gwangsan-gu, Gwangju 62363 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$367,5.0,,h_201
+202,Namdo Hostel,"21, World cup 4gang-ro 182beon-gil, Gwangju 61976 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$320,5.0,,h_202
+203,Biennale Motel,"104, Daeja-ro, Buk-gu, Gwangju 61262 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$402,3.5,,h_203
+204,S Hotel,"Saraselmotel 103 Sangmupyeonghwa-ro, Gwangju 61963 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$310,4.0,,h_204
+205,Laurence Motel,"19, Hwaun-ro 220beon-gil, Seo-gu, Gwangju 61938 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$287,5.0,,h_205
+206,Midas Tourist Hotel,"679-5, Ssangahm-dong, Gwangsan-gu, Gwangju 506-303 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$189,3.0,,h_206
+207,Oasita Hostel,"20, Dongmyeong-ro 20beon-gil, Dong-gu, Gwangju 61434 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$136,3.5,,h_207
+208,Danbi Guesthouse,"23, Baekseo-ro 119beon-gil, Dong-gu, Gwangju 501-808 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$427,4.0,,h_208
+209,Athene Hotel,"Atene 156 Sangmupyeonghwa-ro, Gwangju 61964 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$159,4.0,,h_209
+210,Manhattan Hotel,"73, Sangmuyeonha-ro, Seo-gu, Gwangju 61949 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$381,3.5,,h_210
+211,Windmill Motel,"150-8, Jungang-ro, Dong-gu, Gwangju 61484 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$234,3.0,,h_211
+212,123 Motel,"86-1, Gwangsan-dong, Dong-gu, Gwangju 501-180 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$66,3.0,,h_212
+213,Hotel Central,"68 Sangmuyeonha-ro, Gwangju 61949 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$202,3.0,,h_213
+214,Shingga Motel,"986-5, Shinga-dong, Gwangsan-gu, Gwangju 506-901 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$463,3.0,,h_214
+215,Eunhasu Motel,"57-2 Gwangcheon-dong, Seo-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$199,3.0,,h_215
+216,Tourist Hotel Masters,"46, Sangmuyeonha-ro, Seo-gu, Gwangju 61949 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$160,3.0,,h_216
+217,Chocolate Hotel,"837, Sangmu-daero, Seo-gu, Gwangju 61964 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$75,2.5,,h_217
+218,Gwangju Sejong Hotel,"30, Gyeongyang-ro 165beon-gil, Buk-gu, Gwangju 61237 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$494,2.5,,h_218
+219,Hotel Good Choice Chungjangro,"3, Seoseok-ro 7beon-gil, Dong-gu, Gwangju 61484 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$427,2.0,,h_219
+220,Hiddink Continental Tourist Hotel,"160-1 Bullo-dong, Dong-gu, Gwangju South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$424,2.5,,h_220
+221,eMo​​tel,"1577-9, Usan-dong, Gwangsan-gu, Gwangju 506-813 South Korea",Gwangju,South Korea,,2024-06-01 15:31:52,$167,2.0,,h_221
