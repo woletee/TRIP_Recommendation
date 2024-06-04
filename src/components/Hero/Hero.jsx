@@ -33,7 +33,7 @@ const Hero = () => {
                   type="text"
                   name="destination"
                   id="destination"
-                  placeholder="Dubai"
+                  placeholder="In Gwangju"
                   className="w-full bg-gray-100 my-2 range accent-primary focus:outline-primary focus:outline outline-1 rounded-full p-2"
                 />
               </div>

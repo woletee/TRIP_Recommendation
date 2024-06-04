@@ -11,39 +11,24 @@ export const NavbarLinks = [
     link: "/",
   },
   {
-    name: "About",
-    link: "/about",
-  },
-  {
-    name: "Blogs",
-    link: "/blogs",
-  },
-  {
-    name: "Best Places",
-    link: "/best-places",
-  },
-  {
     name: "Restaurants",
     link: "/restaurants",
+  },
+  {
+    name: "Shopping Malls",
+    link: "/shopping",
   },
   {
     name: "Hotels",
     link: "/hotel",
   },
-];
-
-const DropdownLinks = [
   {
-    name: "Our Services",
-    link: "/#services",
+    name: "About",
+    link: "/about",
   },
   {
-    name: "Top Brands",
-    link: "/#mobile_brands",
-  },
-  {
-    name: "Location",
-    link: "/#location",
+    name: "Best Places",
+    link: "/best-places",
   },
 ];
 
@@ -57,11 +42,6 @@ const Navbar = ({ handleOrderPopup }) => {
     <>
       <nav className="fixed top-0 right-0 w-full z-50 bg-white backdrop-blur-sm text-black shadow-md">
         <div className="bg-gradient-to-r from-primary to-secondary text-white ">
-          {/* <div className="container py-[2px] sm:block hidden">
-            <div className="flex items-center justify-between">
-              <p>mobile no. +7 (777) 760-83-82</p>
-            </div>
-          </div> */}
         </div>
         <div className="container py-3 sm:py-0">
           <div className="flex justify-between items-center">
@@ -88,13 +68,13 @@ const Navbar = ({ handleOrderPopup }) => {
                   </NavLink>
                 </li>
                 <li className="py-4">
-                  <NavLink to="/best-places" activeClassName="active">
-                    Best Places
+                  <NavLink to="/shopping" activeClassName="active">
+                    Shopping Malls
                   </NavLink>
                 </li>
                 <li className="py-4">
-                  <NavLink to="/blogs" activeClassName="active">
-                    Blogs
+                  <NavLink to="/best-places" activeClassName="active">
+                    Best Places
                   </NavLink>
                 </li>
                 <li className="py-4">
@@ -103,27 +83,8 @@ const Navbar = ({ handleOrderPopup }) => {
                   </NavLink>
                 </li>
                 <li className="group relative cursor-pointer">
-                  <a
-                    href="/#home"
-                    className="flex h-[72px] items-center gap-[2px]"
-                  >
-                    Quick Links{" "}
-                    <span>
-                      <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
-                    </span>
-                  </a>
                   <div className="absolute -left-9 z-[9999] hidden w-[150px] rounded-md bg-white p-2 text-black group-hover:block shadow-md ">
                     <ul className="space-y-3">
-                      {DropdownLinks.map((data) => (
-                        <li key={data.name}>
-                          <a
-                            className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
-                            href={data.link}
-                          >
-                            {data.name}
-                          </a>
-                        </li>
-                      ))}
                     </ul>
                   </div>
                 </li>

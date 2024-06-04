@@ -6,9 +6,11 @@ import Hotels from "../components/Hotels/Hotels";
 const Hotel = () => {
   return (
     <>
-      <div className="pt-14">
-        <Hotels />
-      </div>
+      <section data-aos="fade-up" className="container">
+        <div className="pt-14">
+          <Hotels />
+        </div>
+      </section>
     </>
   );
 };
