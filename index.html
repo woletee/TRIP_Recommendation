@@ -11,3 +11,69 @@
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Recommendations</title>
+    <style>
+        #root {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .hotelsContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .hotelCard {
+            border: 1px solid #ccc;
+            padding: 16px;
+            margin: 16px;
+            border-radius: 8px;
+            flex: 1 1 calc(25% - 32px); /* 4 hotels per row */
+            box-sizing: border-box;
+            transition: transform 0.3s, box-shadow 0.3s;
+            max-width: calc(25% - 32px);
+            text-align: left;
+        }
+        .hotelImage {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .likeBtn {
+            cursor: pointer;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+        .dislikeBtn {
+            cursor: pointer;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+        .mapIcon {
+            cursor: pointer;
+            font-size: 24px;
+            margin-left: 10px;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <script src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=YOUR_CLIENT_ID"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="bundle.js"></script>
+</body>
+</html>
