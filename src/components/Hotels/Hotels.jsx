@@ -17,7 +17,7 @@ const Hotel = () => {
         setError(''); // Reset the error state before fetching
         try {
             console.log('Fetching hotel data...');
-            const response = await axios.get('http://3.12.166.69:5000/api/all-hotels');
+            const response = await axios.get('https://ec2-54-221-54-196.compute-1.amazonaws.com/api/all-hotels');
             console.log('API Response:', response.data); // Log the API response
             let filteredHotels = response.data;
             if (minPrice) {
