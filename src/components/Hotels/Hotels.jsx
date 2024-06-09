@@ -70,7 +70,7 @@ const Hotel = () => {
                     <p>Phone: {hotel.phone || 'N/A'}</p>
                     <p>Stars: {hotel.star || 'N/A'}</p>
                     <p>Amenities: {hotel.top_amenities?.join(', ') || 'N/A'}</p>
-                    <HotelLink href={hotel.book_url} target="_blank" rel="noopener noreferrer">Book Now</HotelLink>
+                    <HotelLink href={hotel.book_url} target="_blank" rel="noopener noreferrer">More</HotelLink>
                 </HotelDetails>
             </HotelCard>
         ));
