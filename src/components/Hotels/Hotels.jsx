@@ -86,7 +86,7 @@ const Hotel = () => {
 
     return (
         <Container>
-            <Title>Hotel Recommendations</Title>
+            <Title></Title>
             <ButtonWrapper>
                 <Button onClick={fetchRecommendations}>Get Recommendations</Button>
                 <StyledSelect onChange={(e) => sortHotels(e.target.value)}>
