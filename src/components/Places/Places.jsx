@@ -1,86 +1,142 @@
-import React from "react";
-import PlaceCard from "./PlaceCard";
-import Img1 from "../../assets/places/Utop Boutique Hotel&Residence.webp";
-import Img2 from "../../assets/places/Mudeungsan National Park.jpg";
-import Img3 from "../../assets/places/Holiday Inn.jpg";
-import Img4 from "../../assets/places/Hwangsol Village.jpg";
-import Img5 from "../../assets/places/World Cup Stadium.jpg";
-import Img6 from "../../assets/places/Mudeungsan Jeungsimsa Temple.jpg";
+import React, { useState } from 'react';
+import axios from 'axios';
+import './Places.css';
 
-const PlacesData = [
-  {
-    img: Img1,
-    title: "Utop Boutique Hotel&Residence",
-    location: "Gwangju, Korea",
-    description: "The UTOP Boutique Hotel & Residence is a smart hotel located in Gwangju, South Korea. It offers amenities like free Wi-Fi, air conditioning, and parking. The hotel also has a traditional Korean restaurant, a traditional Japanese restaurant, and conference rooms. It is located close to the Gwangju Statue of Peace.",
-    price: 70,
-    type: "Hotels",
-  },
-  {
-    img: Img2,
-    title: "Mudeungsan National Park",
-    location: "Gwangju, Korea",
-    description: "Mudeungsan National Park, located on the border of Gwangju and Jeollanam-do provinces in South Korea, is a stunning mountain park known for its scenic beauty and diverse hiking trails.",
-    price: "10",
-    type: "National Parks",
-  },
-  {
-    img: Img3,
-    title: "Holiday Inn",
-    location: "Gwangju, Korea",
-    description:
-      "Stay conveniently located at the Holiday Inn Gwangju, Korea! This IHG hotel offers bright, minimalist rooms perfect for unwinding after exploring the city. ",
-    price: 100,
-    type: "Hotels",
-  },
-  {
-    img: Img4,
-    title: "Hwangsol Village",
-    location: "Gwangju, Korea",
-    description: "This popular spot offers a diverse range of Korean dishes, from sizzling Korean BBQ to comforting noodle soups. With its delicious food, friendly atmosphere, and convenient location, Hwangsol Village is a favorite among locals and visitors alike.",
-    price: 10,
-    type: "Restaurants",
-  },
-  {
-    img: Img5,
-    title: "World Cup Stadium",
-    location: "Gwangju, Korea",
-    description:
-      "Experience a piece of sporting history at the World Cup Stadium in Gwangju! Built for the 2002 FIFA World Cup, this impressive stadium continues to host major sporting events and concerts.",
-    price: 15,
-    type: "Arenas & Stadiums",
-  },
-  {
-    img: Img6,
-    title: "Mudeungsan Jeungsimsa Temple",
-    location: "Gwangju, Korea",
-    description:
-      "Mudeungsan Jeungsimsa Temple is a haven of peace nestled on the western foothills of Mudeungsan National Park in Gwangju, South Korea.  Founded in 517 by Buddhist monk Cheolgamseonsa Do Yun, the temple boasts a rich history and cultural significance.",
-    price: 10,
-    type: "Religious Sites",
-  },
-];
+const Places = () => {
+  const [formData, setFormData] = useState({
+    type: 'museum',
+    start_time: 9,
+    end_time: 17,
+    restaurant_recommendation: 'no',
+    hotel_recommendation: 'no',
+    mall_recommendation: 'no',
+    restaurant_budget: 0,
+    hotel_budget: 0,
+  });
 
-const Places = ({ handleOrderPopup }) => {
+  const [results, setResults] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await axios.post('https://ec2-54-221-54-196.compute-1.amazonaws.com/recommend', formData);
+      setResults(response.data);
+    } catch (err) {
+      setError('Error fetching recommendations. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <>
-      <div className="dark:bg-gray-900 dark:text-white bg-gray-50 py-10">
-        <section data-aos="fade-up" className="container ">
-          <h1 className=" my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-bold">
-            Best Places to Visit
-          </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {PlacesData.map((item, index) => (
-              <PlaceCard
-                handleOrderPopup={handleOrderPopup}
-                key={index}
-                {...item}
-              />
+    <div className="container">
+      <h1 className="title">Trip Recommendation</h1>
+      <form onSubmit={handleSubmit} className="form">
+        <div className="form-group">
+          <label>Type of Place:</label>
+          <select name="type" value={formData.type} onChange={handleChange} className="form-control">
+            <option value="museum">Museum</option>
+            <option value="park">Park</option>
+            <option value="restaurant">Restaurant</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Start Time:</label>
+          <input type="number" name="start_time" value={formData.start_time} onChange={handleChange} className="form-control" />
+        </div>
+        <div className="form-group">
+          <label>End Time:</label>
+          <input type="number" name="end_time" value={formData.end_time} onChange={handleChange} className="form-control" />
+        </div>
+        <div className="form-group">
+          <label>Include Restaurants:</label>
+          <select name="restaurant_recommendation" value={formData.restaurant_recommendation} onChange={handleChange} className="form-control">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Restaurant Budget:</label>
+          <input type="number" name="restaurant_budget" value={formData.restaurant_budget} onChange={handleChange} className="form-control" />
+        </div>
+        <div className="form-group">
+          <label>Include Hotels:</label>
+          <select name="hotel_recommendation" value={formData.hotel_recommendation} onChange={handleChange} className="form-control">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Hotel Budget (USD):</label>
+          <input type="number" name="hotel_budget" value={formData.hotel_budget} onChange={handleChange} className="form-control" />
+        </div>
+        <div className="form-group">
+          <label>Include Malls:</label>
+          <select name="mall_recommendation" value={formData.mall_recommendation} onChange={handleChange} className="form-control">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+        <button type="submit" className="btn-submit">Get Recommendations</button>
+      </form>
+      
+      {loading && <p>Loading...</p>}
+      {error && <p>{error}</p>}
+      
+      {results && (
+        <div className="results">
+          <h2>Recommended Places</h2>
+          <ul>
+            {results.places.map((place, index) => (
+              <li key={index}>{place.Name} - {place.predicted_rating}</li>
             ))}
-          </div>
-        </section>
-      </div>
-    </>
+          </ul>
+          
+          {results.restaurants.length > 0 && (
+            <>
+              <h2>Recommended Restaurants</h2>
+              <ul>
+                {results.restaurants.map((restaurant, index) => (
+                  <li key={index}>{restaurant.Name}</li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {results.hotels.length > 0 && (
+            <>
+              <h2>Recommended Hotels</h2>
+              <ul>
+                {results.hotels.map((hotel, index) => (
+                  <li key={index}>{hotel.Name}</li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {results.malls.length > 0 && (
+            <>
+              <h2>Recommended Malls</h2>
+              <ul>
+                {results.malls.map((mall, index) => (
+                  <li key={index}>{mall.Name}</li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+      )}
+    </div>
   );
 };
 
