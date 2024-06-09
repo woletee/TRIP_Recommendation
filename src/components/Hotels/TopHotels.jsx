@@ -44,7 +44,7 @@ const TopHotels = () => {
             <p style={styles.city}>{hotel.city}</p>
             <p style={styles.rating}>Rating: {hotel.rating.value} ({hotel.rating.count} reviews)</p>
             <p style={styles.price}>Price: ${hotel.price.value}</p>
-            <a href={hotel.book_url} target="_blank" rel="noopener noreferrer" style={styles.bookButton}>Book Now</a>
+            <a href={hotel.book_url} target="_blank" rel="noopener noreferrer" style={styles.bookButton}>More</a>
           </div>
         ))}
       </div>
