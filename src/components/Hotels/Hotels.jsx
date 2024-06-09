@@ -52,7 +52,7 @@ const Hotel = () => {
     const displayHotels = (hotelsData) => {
         console.log('Displaying Hotels:', hotelsData); // Log the hotels data being displayed
         if (!hotelsData || hotelsData.length === 0) {
-            return <p>Finding Hotels..</p>;
+            return <p>Finding Hotels...</p>;
         }
 
         return hotelsData.map(hotel => (
@@ -71,6 +71,9 @@ const Hotel = () => {
                     <p>Stars: {hotel.star || 'N/A'}</p>
                     <p>Amenities: {hotel.top_amenities?.join(', ') || 'N/A'}</p>
                     <HotelLink href={hotel.book_url} target="_blank" rel="noopener noreferrer">More</HotelLink>
+                    <MapIcon onClick={() => window.open(`https://map.naver.com/v5/search/${hotel.name}/place/${hotel.location.lat},${hotel.location.lng}`, '_blank')}>
+                        📍
+                    </MapIcon>
                 </HotelDetails>
             </HotelCard>
         ));
@@ -83,7 +86,7 @@ const Hotel = () => {
 
     return (
         <Container>
-            <Title></Title>
+            <Title>Hotel Recommendations</Title>
             <ButtonWrapper>
                 <Button onClick={fetchRecommendations}>Get Recommendations</Button>
                 <StyledSelect onChange={(e) => sortHotels(e.target.value)}>
@@ -122,7 +125,7 @@ const Hotel = () => {
                     <FormButton type="submit">Find Hotels</FormButton>
                 </FormWrapper>
             )}
-            {loading && <p></p>}
+            {loading && <p>Loading...</p>}
             {error && <p>{error}</p>}
             <HotelsContainer>
                 {displayHotels(hotels)}
@@ -147,7 +150,7 @@ const ButtonWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 60px 0 0 20px; /* Adjusted the top margin to move the button lower */
+    margin: 20px 0;
 `;
 
 const Button = styled.button`
@@ -259,26 +262,29 @@ const HotelImage = styled.img`
 
 const HotelDetails = styled.div`
     font-size: 1rem;
-    color: #555;
-
-    p {
-        margin: 5px 0;
-    }
+    color: #666;
 `;
 
 const HotelLink = styled.a`
     display: inline-block;
     margin-top: 10px;
-    background-color: #28a745;
+    padding: 10px 20px;
+    background-color: #007BFF;
     color: white;
-    padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 
     &:hover {
-        background-color: #218838;
+        background-color: #0056b3;
     }
+`;
+
+const MapIcon = styled.span`
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1.5rem; // Adjust size as needed
 `;
 
 export default Hotel;
