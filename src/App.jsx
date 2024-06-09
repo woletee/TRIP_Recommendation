@@ -15,7 +15,7 @@ import ShoppingMallDetails from "./pages/ShoppingMallDetails"
 import Hotels from "./pages/Hotel";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import TopHotels from "./components/Hotels/TopHotels";
 const App = () => {
   React.useEffect(() => {
     AOS.init({
