@@ -45,7 +45,7 @@ const TopHotels = () => {
             <p style={styles.rating}>Rating: {hotel.rating.value} ({hotel.rating.count} reviews)</p>
             <p style={styles.price}>Price: ${hotel.price.value}</p>
             <div style={styles.linksContainer}>
-              <a href={hotel.book_url} target="_blank" rel="noopener noreferrer" style={styles.bookButton}>Book Now</a>
+              <a href={hotel.book_url} target="_blank" rel="noopener noreferrer" style={styles.bookButton}>More</a>
               <span 
                 style={styles.mapIcon}
                 onClick={() => window.open(`https://map.naver.com/v5/search/${hotel.name}/place/${hotel.location.lat},${hotel.location.lng}`, '_blank')}
