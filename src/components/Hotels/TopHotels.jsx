@@ -44,7 +44,15 @@ const TopHotels = () => {
             <p style={styles.city}>{hotel.city}</p>
             <p style={styles.rating}>Rating: {hotel.rating.value} ({hotel.rating.count} reviews)</p>
             <p style={styles.price}>Price: ${hotel.price.value}</p>
-            <a href={hotel.book_url} target="_blank" rel="noopener noreferrer" style={styles.bookButton}>More</a>
+            <div style={styles.linksContainer}>
+              <a href={hotel.book_url} target="_blank" rel="noopener noreferrer" style={styles.bookButton}>Book Now</a>
+              <span 
+                style={styles.mapIcon}
+                onClick={() => window.open(`https://map.naver.com/v5/search/${hotel.name}/place/${hotel.location.lat},${hotel.location.lng}`, '_blank')}
+              >
+                📍
+              </span>
+            </div>
           </div>
         ))}
       </div>
@@ -108,6 +116,10 @@ const styles = {
     fontWeight: 'bold',
     marginBottom: '10px',
   },
+  linksContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  },
   bookButton: {
     display: 'inline-block',
     padding: '10px 15px',
@@ -115,6 +127,11 @@ const styles = {
     color: '#fff',
     textDecoration: 'none',
     borderRadius: '5px',
+    marginRight: '10px',
+  },
+  mapIcon: {
+    cursor: 'pointer',
+    fontSize: '1.5rem', // Adjust size as needed
   },
   loading: {
     textAlign: 'center',
