@@ -62,11 +62,13 @@ const ShoppingMallDetails = () => {
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex justify-center items-center">
           <img
             src={mall["imageUrls/0"]}
-            alt={mall.name}
+            alt={mall.name || "Name not provided"}
             className="w-60 h-40 object-cover rounded-lg"
           />
           <div className="p-6">
-            <h1 className="my-8 border-l-8 border-primary/50 py-2 pl-2 text-4xl font-bold mb-4 text-gray-800 dark:text-white">{mall.name}</h1>
+            <h1 className="my-8 border-l-8 border-primary/50 py-2 pl-2 text-4xl font-bold mb-4 text-gray-800 dark:text-white">
+              {mall.name || "Name not provided"}
+            </h1>
             <p className="text-xl mb-2 text-gray-600 dark:text-gray-300">
               <strong>Location:</strong> {mall.address}
             </p>
