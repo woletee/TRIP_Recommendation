@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const TopRestaurants = () => {
     const [restaurants, setRestaurants] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
+    const [error, setError] = useState(''); 
 
     useEffect(() => {
         fetchTopRestaurants();
