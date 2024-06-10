@@ -76,7 +76,7 @@ const Team = () => {
   return (
     <>
       <div data-aos="fade-up" data-aos-duration="300" className="py-10">
-        <div className="container">
+        <div className="container mx-auto p-6 bg-white rounded-lg shadow-md">
           {/* Header section */}
           <div className="text-left">
             <h1 className="inline-block border-l-8 border-primary/50 py-2 pl-2 mb-4 text-xl font-bold sm:text-3xl">
