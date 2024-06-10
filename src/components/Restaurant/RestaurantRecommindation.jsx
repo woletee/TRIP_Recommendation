@@ -1,144 +1,95 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
-const Restaurants = () => {
-    const [restaurants, setRestaurants] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
+const Restaurant = () => {
+  const [restaurants, setRestaurants] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const restaurantsPerPage = 10;
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        fetchTopRestaurants();
-    }, []);
+  useEffect(() => {
+    fetch("/api/clusters")
+      .then(res => res.json())
+      .then(data => {
+        console.log("Data received:", data); // Log the received data
+        setRestaurants(data.clusters);
+      })
+      .catch(error => {
+        console.error("Error fetching data:", error); // Log any fetch errors
+      });
+  }, []);
 
-    const fetchTopRestaurants = async () => {
-        setLoading(true);
-        setError(''); // Reset the error state before fetching
-        try {
-            console.log('Fetching top restaurant data...');
-            const response = await axios.get('https://ec2-54-221-54-196.compute-1.amazonaws.com/api/all-restaurants');
-            console.log('API Response:', response.data); // Log the API response
+  const indexOfLastRestaurant = currentPage * restaurantsPerPage;
+  const indexOfFirstRestaurant = indexOfLastRestaurant - restaurantsPerPage;
+  const currentRestaurants = restaurants.slice(indexOfFirstRestaurant, indexOfLastRestaurant);
 
-            // Check if the response is an array
-            if (Array.isArray(response.data)) {
-                const parsedData = response.data;
-                const containsNaN = obj => Object.values(obj).some(value => value === null || value === undefined || value !== value);
-                const filteredData = parsedData.filter(item => item.image && !containsNaN(item));
-                setRestaurants(filteredData);
-            } else {
-                setError('Unexpected API response format');
-            }
-        } catch (err) {
-            setError('Error fetching top restaurants');
-            console.error('Fetch error:', err); // Log the error
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    const displayRestaurants = (restaurantsData) => {
-        console.log('Displaying Restaurants:', restaurantsData); // Log the restaurants data being displayed
-        if (!restaurantsData || restaurantsData.length === 0) {
-            return <p>Finding Restaurants...</p>;
-        }
-
-        return restaurantsData.map((restaurant, index) => (
-            <RestaurantCard key={restaurant.id || index}>
-                <RestaurantImage src={restaurant.image} alt={restaurant.name} />
-                <RestaurantName>{restaurant.name}</RestaurantName>
-                <RestaurantDetails>
-                    <p>Ranking: {restaurant.Ranking}</p>
-                    <p>Address: {restaurant.address}</p>
-                    <p>Number of Reviews: {restaurant.numberOfReviews}</p>
-                    <p>Phone: {restaurant.phone}</p>
-                    <p>Rating: {restaurant.rating}</p>
-                    <MapIcon 
-                        onClick={() => window.open(`https://map.naver.com/v5/search/${restaurant.name}/place/${restaurant.latitude},${restaurant.longitude}`, '_blank')}
-                    >
-                        📍
-                    </MapIcon>
-                </RestaurantDetails>
-            </RestaurantCard>
-        ));
-    };
-
-    return (
-        <Container>
-            <Title>Popular Restaurants</Title>
-            {loading && <p>Loading...</p>}
-            {error && <p>{error}</p>}
-            <RestaurantsContainer>
-                {displayRestaurants(restaurants)}
-            </RestaurantsContainer>
-        </Container>
-    );
-};
-
-const Container = styled.div`
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-`;
-
-const Title = styled.h1`
-    text-align: left;
-    color: #333;
-    font-size: 2.5em;
-    font-weight: bold;
-    border-bottom: 4px solid #333;
-    display: inline-block;
-    padding-bottom: 10px;
-    margin-top: 20px; // Add extra space above the title to lower its position
-    margin-bottom: 40px; // Add extra space below the title
-`;
-
-const RestaurantsContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-`;
-
-const RestaurantCard = styled.div`
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    flex: 1 1 calc(25% - 20px);
-    max-width: calc(25% - 20px);
-    text-align: left;
-
-    &:hover {
-        transform: translateY(-10px);
+  const nextPage = () => {
+    if (currentPage < Math.ceil(restaurants.length / restaurantsPerPage)) {
+      setCurrentPage(currentPage + 1);
     }
-`;
+  };
 
-const RestaurantImage = styled.img`
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-`;
-
-const RestaurantName = styled.h2`
-    margin: 0 0 10px;
-    color: #333;
-`;
-
-const RestaurantDetails = styled.div`
-    font-size: 1rem;
-    color: #666;
-
-    p {
-        margin: 5px 0;
+  const prevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
     }
-`;
+  };
 
-const MapIcon = styled.span`
-    display: inline-block;
-    margin-left: 10px;
-    cursor: pointer;
-    font-size: 1.5rem; // Adjust size as needed
-`;
+  const handleRestaurantClick = (id) => {
+    navigate(`/restaurants/${id}`);
+  };
 
-export default Restaurants;
+  return (
+    <div className="dark:bg-gray-900 dark:text-white bg-gray-50 py-10">
+      <section data-aos="fade-up" className="container">
+        <h1 className="my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-bold mt-20">
+          Restaurants
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {currentRestaurants.map((restaurant, index) => (
+            <div
+              key={index}
+              className="rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2 cursor-pointer"
+              onClick={() => handleRestaurantClick(restaurant.id)}
+            >
+              <img
+                src={restaurant.image}
+                alt={restaurant.name}
+                className="w-full h-40 object-cover rounded-t-lg"
+              />
+              <div className="p-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-2">
+                  {restaurant.name}
+                </h2>
+                <p className="text-sm text-gray-600 mb-1">
+                  Location: {restaurant.address}
+                </p>
+                <p className="text-sm text-gray-600">
+                  Ranking: {restaurant.rankingPosition}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="pagination mt-8 flex justify-center">
+          <button
+            onClick={prevPage}
+            disabled={currentPage === 1}
+            className="mx-2 px-4 py-2 bg-primary text-white rounded-md disabled:opacity-50"
+          >
+            Previous
+          </button>
+          <button
+            onClick={nextPage}
+            disabled={currentPage === Math.ceil(restaurants.length / restaurantsPerPage)}
+            className="mx-2 px-4 py-2 bg-primary text-white rounded-md disabled:opacity-50"
+          >
+            Next
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default Restaurant;

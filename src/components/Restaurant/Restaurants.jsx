@@ -1,142 +1,57 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import styled from 'styled-components';
+import React, { useState, useEffect } from "react";
+import Papa from "papaparse";
+import RestaurantCard from "./RestaurantCard";
 
-const TopRestaurants = () => {
-    const [restaurants, setRestaurants] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
+function Restaurants() {
+  const [restaurantData, setRestaurantData] = useState([]);
+  const [error, setError] = useState(null);
 
-    useEffect(() => {
-        fetchTopRestaurants();
-    }, []);
-
-    const fetchTopRestaurants = async () => {
-        setLoading(true);
-        setError(''); // Reset the error state before fetching
-        try {
-            console.log('Fetching top restaurant data...');
-            const response = await axios.get('https://ec2-54-221-54-196.compute-1.amazonaws.com/api/all-restaurants');
-            console.log('API Response:', response.data); // Log the API response
-
-            // Check if the response is an array
-            if (Array.isArray(response.data)) {
-                const parsedData = response.data;
-                const containsNaN = obj => Object.values(obj).some(value => value === null || value === undefined || value !== value);
-                const filteredData = parsedData.filter(item => item.image && !containsNaN(item));
-                setRestaurants(filteredData);
-            } else {
-                setError('Unexpected API response format');
-            }
-        } catch (err) {
-            setError('Error fetching top restaurants');
-            console.error('Fetch error:', err); // Log the error
-        } finally {
-            setLoading(false);
-        }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/src/Data/Restaurants/100final.csv");
+        const reader = response.body.getReader();
+        const result = await reader.read();
+        const decoder = new TextDecoder("utf-8");
+        const csv = decoder.decode(result.value);
+        const parsedData = Papa.parse(csv, { header: true }).data;
+        const filteredData = parsedData.filter(item => item.image).slice(0, 20);
+        setRestaurantData(filteredData);
+      } catch (error) {
+        setError(error.message || "An error occurred while fetching data");
+      }
     };
 
-    const displayRestaurants = (restaurantsData) => {
-        console.log('Displaying Restaurants:', restaurantsData); // Log the restaurants data being displayed
-        if (!restaurantsData || restaurantsData.length === 0) {
-            return <p>Finding Restaurants...</p>;
-        }
+    fetchData();
+  }, []);
 
-        return restaurantsData.map((restaurant, index) => (
-            <RestaurantCard key={restaurant.id || index}>
-                <RestaurantImage src={restaurant.image} alt={restaurant.name} />
-                <RestaurantName>{restaurant.name}</RestaurantName>
-                <RestaurantDetails>
-                    <p>Ranking: {restaurant.Ranking}</p>
-                    <p>Address: {restaurant.address}</p>
-                    <p>Number of Reviews: {restaurant.numberOfReviews}</p>
-                    <p>Phone: {restaurant.phone}</p>
-                    <p>Rating: {restaurant.rating}</p>
-                    <MapIcon 
-                        onClick={() => window.open(`https://map.naver.com/v5/search/${restaurant.name}/place/${restaurant.latitude},${restaurant.longitude}`, '_blank')}
-                    >
-                        📍
-                    </MapIcon>
-                </RestaurantDetails>
-            </RestaurantCard>
-        ));
-    };
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
-    return (
-        <Container>
-            <Title>Restaurants in Gwangju</Title>
-            {loading && <p>Loading...</p>}
-            {error && <p>{error}</p>}
-            <RestaurantsContainer>
-                {displayRestaurants(restaurants)}
-            </RestaurantsContainer>
-        </Container>
-    );
-};
+  return (
+    <div className="dark:bg-gray-900 dark:text-white bg-gray-50 py-10">
+      <section data-aos="fade-up" className="container">
+        <h1 className="my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-bold mt-20">
+          Restaurants
+        </h1>
+        <div className="overflow-x-auto scrollbar-hide"> {}
+          <div className="flex space-x-4">
+            {restaurantData.map((item, index) => (
+              <RestaurantCard
+                key={index}
+                img={item.image}
+                name={item.name}
+                location={item.address}
+                ranking={item.rankingPosition}
+                restaurantId={item.id}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
 
-const Container = styled.div`
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-`;
-
-const Title = styled.h1`
-    text-align: left;
-    color: #333;
-    font-size: 2.5em;
-    font-weight: bold;
-    border-bottom: 4px solid #333;
-    display: inline-block;
-    padding-bottom: 10px;
-`;
-
-const RestaurantsContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-`;
-
-const RestaurantCard = styled.div`
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    flex: 1 1 calc(25% - 20px);
-    max-width: calc(25% - 20px);
-    text-align: left;
-
-    &:hover {
-        transform: translateY(-10px);
-    }
-`;
-
-const RestaurantImage = styled.img`
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-`;
-
-const RestaurantName = styled.h2`
-    margin: 0 0 10px;
-    color: #333;
-`;
-
-const RestaurantDetails = styled.div`
-    font-size: 1rem;
-    color: #666;
-
-    p {
-        margin: 5px 0;
-    }
-`;
-
-const MapIcon = styled.span`
-    display: inline-block;
-    margin-left: 10px;
-    cursor: pointer;
-    font-size: 1.5rem; // Adjust size as needed
-`;
-
-export default TopRestaurants;
+export default Restaurants;

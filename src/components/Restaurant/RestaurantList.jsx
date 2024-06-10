@@ -60,9 +60,6 @@ function RestaurantList() {
                   <p className="text-sm text-gray-600 mb-1">
                     Location: {item.address}
                   </p>
-                  <p className="text-sm text-gray-600">
-                    Ranking: {item.rankingPosition}
-                  </p>
                 </div>
               </div>
             ))}

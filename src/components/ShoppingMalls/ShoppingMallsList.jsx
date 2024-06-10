@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import { useNavigate } from "react-router-dom";
 
-function ShoppingMallsList() {
+const ShoppingMallsList = () => {
   const [mallData, setMallData] = useState([]);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
@@ -37,6 +37,12 @@ function ShoppingMallsList() {
     navigate(`/shopping/${id}`);
   };
 
+  const redirectToGoogleMaps = (address) => {
+    const formattedAddress = encodeURIComponent(address);
+    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${formattedAddress}`;
+    window.open(googleMapsUrl, "_blank");
+  };
+
   return (
     <div className="dark:bg-gray-900 dark:text-white bg-gray-50 py-10">
       <section data-aos="fade-up" className="container">
@@ -59,24 +65,14 @@ function ShoppingMallsList() {
                 <h2 className="text-xl font-bold text-gray-800 mb-2">
                   {item.address}
                 </h2>
-                {/* <p className="text-sm text-gray-600">
-                  Opening Hours:
-                </p>
-                <ul className="opening-hours">
-                  {Array.from(Array(7).keys()).map((day) => (
-                    <li key={day}>
-                      {item[`openingHours/${day}/day`]}: {item[`openingHours/${day}/hours`]}
-                    </li>
-                  ))}
-                </ul> */}
-                <p className="text-sm text-gray-600 mb-1">
-                  Phone: {item.phone}
-                </p>
-                <p>
-                  <a href={item.searchPageLoadedUrl} target="_blank" rel="noopener noreferrer">
-                    Visit Website
-                  </a>
-                </p>
+                <div className="text-center">
+                  <button
+                    onClick={() => redirectToGoogleMaps(item.address)}
+                    className="inline-block bg-primary text-white py-2 px-4 rounded-lg transition-transform duration-300 hover:-translate-y-1 hover:bg-primary-dark"
+                  >
+                    Get Directions
+                  </button>
+                </div>
               </div>
             </div>
           ))}
@@ -84,6 +80,6 @@ function ShoppingMallsList() {
       </section>
     </div>
   );
-}
+};
 
 export default ShoppingMallsList;

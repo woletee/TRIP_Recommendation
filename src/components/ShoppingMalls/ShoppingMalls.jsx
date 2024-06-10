@@ -45,9 +45,7 @@ function ShoppingMalls() {
                 address={item.address}
                 phone={item.phone}
                 website={item.searchPageLoadedUrl}
-                handleMallClick={() => {
-                  console.log(`Mall clicked: ${item.name}`);
-                }}
+                id={index + 1}
               />
             ))}
           </div>

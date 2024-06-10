@@ -25,13 +25,13 @@ const Banner = () => {
                   data-aos="fade-up"
                   className="text-3xl sm:text-4xl font-bold"
                 >
-                  Explore all corners of The world with us
+                  Explore all corners of Gwangju with us
                 </h1>
                 <p
                   data-aos="fade-up"
                   className="text-sm text-gray-500 tracking-wide leading-8"
                 >
-                Seamless Flights to Any Destination. Unwind in Comfort - Find Your Perfect Stay. Stay Connected - Share Your Adventures. Savor Local Flavors - Unforgettable Food Experiences.  
+                Seamless Trips to Any Destination in Gwangju. Unwind in Comfort - Find Your Perfect Stay. Stay Connected - Share Your Adventures. Savor Local Flavors - Unforgettable Food Experiences.  
                   <br />
                 </p>
                 <div data-aos="zoom-in" className="grid grid-cols-2 gap-6">
@@ -48,7 +48,7 @@ const Banner = () => {
                   <div className="space-y-6">
                     <div className="flex items-center gap-4">
                       <IoIosWifi className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-green-100 dark:bg-green-400" />
-                      <p>Wi-fi</p>
+                      <p>Wi-Fi</p>
                     </div>
                     <div className="flex items-center gap-4">
                       <IoFastFoodSharp className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-yellow-100 dark:bg-yellow-400" />

@@ -1,143 +1,143 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import styled from 'styled-components';
+import './Places.css';
 
 const Places = () => {
-    const [places, setPlaces] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
+  const [formData, setFormData] = useState({
+    type: 'museum',
+    start_time: 9,
+    end_time: 17,
+    restaurant_recommendation: 'no',
+    hotel_recommendation: 'no',
+    mall_recommendation: 'no',
+    restaurant_budget: 0,
+    hotel_budget: 0,
+  });
 
-    useEffect(() => {
-        fetchPlaces();
-    }, []);
+  const [results, setResults] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-    const fetchPlaces = async () => {
-        setLoading(true);
-        setError(''); // Reset the error state before fetching
-        try {
-            console.log('Fetching places data...');
-            const response = await axios.get('https://ec2-54-221-54-196.compute-1.amazonaws.com/api/all-places'); // Replace with the actual API URL
-            console.log('API Response:', response.data); // Log the API response
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-            // Check if the response is an array
-            if (Array.isArray(response.data)) {
-                const parsedData = response.data;
-                const containsNaN = obj => Object.values(obj).some(value => value === null || value === undefined || value !== value);
-                const filteredData = parsedData.filter(item => item['image url'] && !containsNaN(item) && item['Name']);
-                setPlaces(filteredData);
-            } else {
-                setError('Unexpected API response format');
-            }
-        } catch (err) {
-            setError('Error fetching places');
-            console.error('Fetch error:', err); // Log the error
-        } finally {
-            setLoading(false);
-        }
-    };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
 
-    const displayPlaces = (placesData) => {
-        console.log('Displaying Places:', placesData); // Log the places data being displayed
-        if (!placesData || placesData.length === 0) {
-            return <p>Finding Places...</p>;
-        }
+    try {
+      const response = await axios.post('https://ec2-54-221-54-196.compute-1.amazonaws.com/recommend', formData);
+      setResults(response.data);
+    } catch (err) {
+      setError('Error fetching recommendations. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
-        return placesData.map((place, index) => (
-            <PlaceCard key={place.id || index}>
-                <PlaceImage src={place['image url']} alt={place['Name']} />
-                <PlaceName>{place['Name']}</PlaceName>
-                <PlaceDetails>
-                    <p>Type: {place.Type}</p>
-                    <p>Location: {place.Location}</p>
-                    <p>Rating: {place.Rating}</p>
-                    <p>Open Hours: {place['Open Hour']} - {place['Close Hour']}</p>
-                    <p>Latitude: {place.latitude}</p>
-                    <p>Longitude: {place.longitude}</p>
-                    <MapIcon 
-                        onClick={() => window.open(`https://map.naver.com/v5/search/${place['Name']}/place/${place.latitude},${place.longitude}`, '_blank')}
-                    >
-                        📍
-                    </MapIcon>
-                </PlaceDetails>
-            </PlaceCard>
-        ));
-    };
+  return (
+    <div className="container1">
+      <h1 className="title">Trip Recommendation</h1>
+      <form onSubmit={handleSubmit} className="form">
+        <div className="form-group">
+          <label>Type of Place:</label>
+          <select name="type" value={formData.type} onChange={handleChange} className="form-control">
+            <option value="museum">Museum</option>
+            <option value="park">Park</option>
+            <option value="restaurant">Restaurant</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Start Time:</label>
+          <input type="number" name="start_time" value={formData.start_time} onChange={handleChange} className="form-control" />
+        </div>
+        <div className="form-group">
+          <label>End Time:</label>
+          <input type="number" name="end_time" value={formData.end_time} onChange={handleChange} className="form-control" />
+        </div>
+        <div className="form-group">
+          <label>Include Restaurants:</label>
+          <select name="restaurant_recommendation" value={formData.restaurant_recommendation} onChange={handleChange} className="form-control">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Restaurant Budget:</label>
+          <input type="number" name="restaurant_budget" value={formData.restaurant_budget} onChange={handleChange} className="form-control" />
+        </div>
+        <div className="form-group">
+          <label>Include Hotels:</label>
+          <select name="hotel_recommendation" value={formData.hotel_recommendation} onChange={handleChange} className="form-control">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Hotel Budget (USD):</label>
+          <input type="number" name="hotel_budget" value={formData.hotel_budget} onChange={handleChange} className="form-control" />
+        </div>
+        <div className="form-group">
+          <label>Include Malls:</label>
+          <select name="mall_recommendation" value={formData.mall_recommendation} onChange={handleChange} className="form-control">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+        <button type="submit" className="btn-submit">Get Recommendations</button>
+      </form>
+      
+      {loading && <p>Loading...</p>}
+      {error && <p>{error}</p>}
+      
+      {results && (
+        <div className="results">
+          <h2>Recommended Places</h2>
+          <ul>
+            {results.places.map((place, index) => (
+              <li key={index}>{place.Name} - {place.predicted_rating}</li>
+            ))}
+          </ul>
+          
+          {results.restaurants.length > 0 && (
+            <>
+              <h2>Recommended Restaurants</h2>
+              <ul>
+                {results.restaurants.map((restaurant, index) => (
+                  <li key={index}>{restaurant.Name}</li>
+                ))}
+              </ul>
+            </>
+          )}
 
-    return (
-        <Container>
-            <Title>Places To go in Gwangju</Title>
-            {loading && <p>Loading...</p>}
-            {error && <p>{error}</p>}
-            <PlacesContainer>
-                {displayPlaces(places)}
-            </PlacesContainer>
-        </Container>
-    );
+          {results.hotels.length > 0 && (
+            <>
+              <h2>Recommended Hotels</h2>
+              <ul>
+                {results.hotels.map((hotel, index) => (
+                  <li key={index}>{hotel.Name}</li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {results.malls.length > 0 && (
+            <>
+              <h2>Recommended Malls</h2>
+              <ul>
+                {results.malls.map((mall, index) => (
+                  <li key={index}>{mall.Name}</li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
 };
-
-const Container = styled.div`
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-`;
-
-const Title = styled.h1`
-    text-align: left;
-    color: #333;
-    font-size: 2.5em;
-    font-weight: bold;
-    border-bottom: 4px solid #333;
-    display: inline-block;
-    padding-bottom: 10px;
-`;
-
-const PlacesContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-`;
-
-const PlaceCard = styled.div`
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    flex: 1 1 calc(25% - 20px);
-    max-width: calc(25% - 20px);
-    text-align: left;
-
-    &:hover {
-        transform: translateY(-10px);
-    }
-`;
-
-const PlaceImage = styled.img`
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-`;
-
-const PlaceName = styled.h2`
-    margin: 0 0 10px;
-    color: #333;
-`;
-
-const PlaceDetails = styled.div`
-    font-size: 1rem;
-    color: #666;
-
-    p {
-        margin: 5px 0;
-    }
-`;
-
-const MapIcon = styled.span`
-    display: inline-block;
-    margin-left: 10px;
-    cursor: pointer;
-    font-size: 1.5rem; // Adjust size as needed
-`;
 
 export default Places;
