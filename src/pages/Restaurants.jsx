@@ -1,14 +1,14 @@
-import React from "react";
-import RestaurantList from "../components/Restaurant/RestaurantList";
-
-function RestaurantsPage() {
+import React from "react"
+import TopRestaurants from "../components/Restaurant/TopResturant";
+import Restaurants from "../components/Restaurant/Restaurants";
+function Restaurant() {
   return (
     <div>
       <section data-aos="fade-up" className="container">
-        <RestaurantList />
+        <Restaurants />
       </section>
     </div>
   );
 }
 
-export default RestaurantsPage;
+export default Restaurant;
