@@ -16,7 +16,6 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
           <FaUserCircle size={50} />
           <div>
             <h1>Hello User</h1>
-            <h1 className="text-sm text-slate-500">Premium user</h1>
           </div>
         </div>
         <nav className="mt-12">
@@ -37,7 +36,7 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
       </div>
       <div className="footer">
         <h1>
-          Made by GIST Student: Rakishev Sanzhar{" "}
+          Made by GIST Students{" "}
         </h1>
       </div>
     </div>

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/logo.png";
 import { NavLink, Link } from "react-router-dom";
-import { FaCaretDown } from "react-icons/fa";
 import ResponsiveMenu from "./ResponsiveMenu";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 
@@ -46,9 +44,6 @@ const Navbar = ({ handleOrderPopup }) => {
         <div className="container py-3 sm:py-0">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4  font-bold text-2xl">
-              <Link to={"/"} onClick={() => window.scrollTo(0, 0)}>
-                <img src={Logo} alt="" className="h-16" />
-              </Link>
             </div>
             <div className="hidden md:block">
               <ul className="flex items-center gap-6 ">
