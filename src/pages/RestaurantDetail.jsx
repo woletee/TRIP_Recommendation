@@ -11,7 +11,7 @@ const RestaurantDetail = () => {
   useEffect(() => {
     const fetchRestaurantData = async () => {
       try {
-        const response = await fetch("/src/Data/Restaurants/100final.csv");
+        const response = await fetch("https://raw.githubusercontent.com/woletee/TRIP_Recommendation/main/src/Data/Restaurants/100final.csv");
         const reader = response.body.getReader();
         const result = await reader.read();
         const decoder = new TextDecoder("utf-8");

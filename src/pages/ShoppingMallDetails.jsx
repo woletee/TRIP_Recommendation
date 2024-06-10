@@ -11,7 +11,7 @@ const ShoppingMallDetails = () => {
   useEffect(() => {
     const fetchMallData = async () => {
       try {
-        const response = await fetch("/src/Data/ShoppingMalls/shopping.csv");
+        const response = await fetch("https://raw.githubusercontent.com/woletee/TRIP_Recommendation/main/src/Data/ShoppingMalls/shopping.csv");
         const reader = response.body.getReader();
         const result = await reader.read();
         const decoder = new TextDecoder("utf-8");
