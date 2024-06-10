@@ -9,7 +9,7 @@ const ShoppingMallCard = ({ img, name, address, id }) => {
   };
 
   return (
-    <div className="min-w-[250px] max-w-[250px] h-[350px] flex flex-col bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+    <div className="min-w-[250px] max-w-[250px] h-[350px] flex flex-col bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2 cursor-pointer mb-2 mt-2">
       <Link to={`/shopping/${id}`} className="cursor-pointer flex-grow">
         <img
           src={img}
