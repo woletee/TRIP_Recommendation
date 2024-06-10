@@ -12,10 +12,7 @@ const RestaurantDetail = () => {
     const fetchRestaurantData = async () => {
       try {
         const response = await fetch("https://raw.githubusercontent.com/woletee/TRIP_Recommendation/main/src/Data/Restaurants/100final.csv");
-        const reader = response.body.getReader();
-        const result = await reader.read();
-        const decoder = new TextDecoder("utf-8");
-        const csv = decoder.decode(result.value);
+        const csv = await response.text();
         const parsedData = Papa.parse(csv, { header: true }).data;
         const restaurantData = parsedData.find(item => item.id === id);
         setRestaurant(restaurantData);
