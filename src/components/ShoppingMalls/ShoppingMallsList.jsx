@@ -11,10 +11,7 @@ const ShoppingMallsList = () => {
     const fetchData = async () => {
       try {
         const response = await fetch("https://raw.githubusercontent.com/woletee/TRIP_Recommendation/main/src/Data/ShoppingMalls/shopping.csv");
-        const reader = response.body.getReader();
-        const result = await reader.read();
-        const decoder = new TextDecoder("utf-8");
-        const csv = decoder.decode(result.value);
+        const csv = await response.text();
         const parsedData = Papa.parse(csv, { header: true }).data.map((item, index) => ({
           id: index + 1, // Generate an id based on the index (starting from 1)
           ...item, // Keep the existing properties from the CSV data
