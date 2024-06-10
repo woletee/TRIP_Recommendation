@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
       <section data-aos="fade-up" className="mt-12">
-        <div className="container my-4">
+        <div className="container my-2">
           <div className="dark:bg-gray-900 dark:text-white bg-gray-50 pt-14">
             <section data-aos="fade-up" className="container py-10">
               <div className="about-us mx-auto p-6 bg-white rounded-lg shadow-md">
