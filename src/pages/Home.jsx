@@ -22,6 +22,9 @@ const Home = () => {
           </header>
           <main>
             <TopHotels />
+             <TopRestaurants/>
+             <TopPlaces/>
+         
           </main>
         </div>
 
@@ -41,8 +44,6 @@ const Home = () => {
           </div>
         </div>
 
-        <Restaurants handleOrderPopup={handleOrderPopup} />
-        <ShoppingMalls handleOrderPopup={handleOrderPopup} />
         <Banner />
         <Team />
       </div>
