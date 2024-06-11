@@ -5,7 +5,20 @@ import ShoppingMalls from "../components/ShoppingMalls/ShoppingMalls";
 import Team from "../components/Team/Team";
 import Banner from "../components/Banner/Banner";
 import TopHotels from "../components/Hotels/TopHotels";
-
+import React from "react";
+import Hero from "../components/Hero/Hero";
+import NatureVid from "../assets/video/main.mp4";
+import ShoppingMalls from "../components/ShoppingMalls/ShoppingMalls";
+import Hotels from "../components/Hotels/HotelCont";
+import Team from "../components/Team/Team";
+import Banner from "../components/Banner/Banner";
+import BannerPic from "../components/BannerPic/BannerPic";
+import BannerImg from "../assets/cover-women.jpg";
+import Banner2 from "../assets/travel-cover2.jpg";
+import TopHotels from "../components/Hotels/TopHotels";
+import Places from "../components/Places/Places";
+import TopRestaurants from "../components/Restaurant/TopResturant";
+import TopPlaces from "../components/Places/Topplaces"
 const Home = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
 
