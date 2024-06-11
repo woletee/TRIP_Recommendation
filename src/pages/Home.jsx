@@ -43,9 +43,9 @@ const Home = () => {
             <h1 className="text-5xl font-bold drop-shadow-md">Gwangju</h1>
           </div>
         </div>
-        <h1 className="my-8 border-l-8 border-primary/50 py-3 pl-2 text-3xl font-bold mt-20 ml-5">
+{/*         <h1 className="my-8 border-l-8 border-primary/50 py-3 pl-2 text-3xl font-bold mt-20 ml-5">
             Hotels
-        </h1>
+        </h1> */}
         <TopHotels />
          <TopRestaurants/>
          <TopPlaces/>
