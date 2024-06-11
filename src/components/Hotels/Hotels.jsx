@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Hotel = () => {
     const [hotels, setHotels] = useState([]);
@@ -11,6 +12,8 @@ const Hotel = () => {
     const [minPrice, setMinPrice] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
     const [stars, setStars] = useState('');
+    const [selectedHotel, setSelectedHotel] = useState(null);
+    const [nearbyPlaces, setNearbyPlaces] = useState([]);
 
     const fetchRecommendations = async () => {
         setLoading(true);
@@ -38,6 +41,17 @@ const Hotel = () => {
         }
     };
 
+    const fetchNearbyPlaces = async (latitude, longitude) => {
+        try {
+            const response = await axios.get('http://ec2-54-221-54-196.compute-1.amazonaws.com/recommend', {
+                params: { latitude, longitude }
+            });
+            setNearbyPlaces(response.data);
+        } catch (err) {
+            console.error('Error fetching nearby places:', err);
+        }
+    };
+
     const sortHotels = (order) => {
         setSortOrder(order);
         let sortedHotels = [...hotels];
@@ -58,10 +72,16 @@ const Hotel = () => {
         return hotelsData.map(hotel => (
             <HotelCard key={hotel.hotel_id}>
                 <HotelName>{hotel.name}</HotelName>
-                <HotelImage 
-                    src={hotel.thumbnail} 
-                    alt={hotel.name}
-                />
+                <Link to={`/places/recommend?longitude=${encodeURIComponent(hotel.location.lng)}&latitude=${encodeURIComponent(hotel.location.lat)}`}>
+                    <HotelImage 
+                        src={hotel.thumbnail} 
+                        alt={hotel.name}
+                        onClick={() => {
+                            setSelectedHotel(hotel);
+                            fetchNearbyPlaces(hotel.location.lat, hotel.location.lng);
+                        }}
+                    />
+                </Link>
                 <HotelDetails>
                     <p>City: {hotel.city}</p>
                     <p>Price: ${hotel.price?.value || 'N/A'}</p>
@@ -86,7 +106,7 @@ const Hotel = () => {
 
     return (
         <Container>
-            <Title></Title>
+            <Title>Hotel Recommendations</Title>
             <ButtonWrapper>
                 <Button onClick={fetchRecommendations}>Get Recommendations</Button>
                 <StyledSelect onChange={(e) => sortHotels(e.target.value)}>
@@ -128,7 +148,44 @@ const Hotel = () => {
             {loading && <p>Loading...</p>}
             {error && <p>{error}</p>}
             <HotelsContainer>
-                {displayHotels(hotels)}
+                {selectedHotel ? (
+                    <HotelDetail>
+                        <HotelName>{selectedHotel.name}</HotelName>
+                        <HotelImage 
+                            src={selectedHotel.thumbnail} 
+                            alt={selectedHotel.name}
+                        />
+                        <HotelDetails>
+                            <p>City: {selectedHotel.city}</p>
+                            <p>Price: ${selectedHotel.price?.value || 'N/A'}</p>
+                            <p>Rating: {selectedHotel.rating?.value || 'N/A'} ({selectedHotel.rating?.count || 0} reviews)</p>
+                            <p>Distance: {selectedHotel.distance?.toFixed(2) || 'N/A'} km</p>
+                            <p>Phone: {selectedHotel.phone || 'N/A'}</p>
+                            <p>Stars: {selectedHotel.star || 'N/A'}</p>
+                            <p>Amenities: {selectedHotel.top_amenities?.join(', ') || 'N/A'}</p>
+                            <HotelLink href={selectedHotel.book_url} target="_blank" rel="noopener noreferrer">More</HotelLink>
+                            <MapIcon onClick={() => window.open(`https://map.naver.com/v5/search/${selectedHotel.name}/place/${selectedHotel.location.lat},${selectedHotel.location.lng}`, '_blank')}>
+                                📍
+                            </MapIcon>
+                        </HotelDetails>
+                        <NearbyPlaces>
+                            <h2>Nearby Restaurants and Places</h2>
+                            {nearbyPlaces.length > 0 ? (
+                                nearbyPlaces.map(place => (
+                                    <div key={place.id}>
+                                        <h3>{place.name}</h3>
+                                        <p>{place.description}</p>
+                                    </div>
+                                ))
+                            ) : (
+                                <p>No nearby places found.</p>
+                            )}
+                        </NearbyPlaces>
+                        <Button onClick={() => setSelectedHotel(null)}>Back to Hotel List</Button>
+                    </HotelDetail>
+                ) : (
+                    displayHotels(hotels)
+                )}
             </HotelsContainer>
         </Container>
     );
@@ -285,6 +342,16 @@ const MapIcon = styled.span`
     margin-left: 10px;
     cursor: pointer;
     font-size: 1.5rem; // Adjust size as needed
+`;
+
+const HotelDetail = styled.div`
+    margin-top: 20px;
+    text-align: left;
+`;
+
+const NearbyPlaces = styled.div`
+    margin-top: 20px;
+    text-align: left;
 `;
 
 export default Hotel;
