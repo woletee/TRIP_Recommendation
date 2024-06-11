@@ -50,7 +50,6 @@ const TopRestaurants = () => {
                 </Link>
                 <RestaurantName>{restaurant.name}</RestaurantName>
                 <RestaurantDetails>
-                    <p>Ranking: {restaurant.Ranking}</p>
                     <p>Address: {restaurant.address}</p>
                     <p>Number of Reviews: {restaurant.numberOfReviews}</p>
                     <p>Phone: {restaurant.phone}</p>
@@ -83,20 +82,22 @@ const TopRestaurants = () => {
 };
 
 const Container = styled.div`
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin-top: 78px;
+    margin-left: 26px;
 `;
 
 const Title = styled.h1`
-    text-align: left;
-    color: #333;
-    font-size: 2.5em;
-    font-weight: bold;
-    border-bottom: 4px solid #333;
-    display: inline-block;
-    padding-bottom: 10px;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    padding-left: 10px;
+    border-left: 8px solid rgba(30, 135, 175, 0.5); /* Adjust the color to match the primary color at 50% opacity */
+    padding: 0.5rem 0; /* Equivalent to py-2 */
+    padding-left: 0.5rem; /* Equivalent to pl-2 */
+    font-size: 1.65rem; /* Equivalent to text-3xl */
+    font-weight: bold; /* Equivalent to font-bold */
+    margin-top: 40px;
 `;
 
 const RestaurantsContainer = styled.div`
