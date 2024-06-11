@@ -72,24 +72,7 @@ const Places = () => {
           <label>Restaurant Budget:</label>
           <input type="number" name="restaurant_budget" value={formData.restaurant_budget} onChange={handleChange} className="form-control" />
         </div>
-        <div className="form-group">
-          <label>Include Hotels:</label>
-          <select name="hotel_recommendation" value={formData.hotel_recommendation} onChange={handleChange} className="form-control">
-            <option value="no">No</option>
-            <option value="yes">Yes</option>
-          </select>
-        </div>
-        <div className="form-group">
-          <label>Hotel Budget (USD):</label>
-          <input type="number" name="hotel_budget" value={formData.hotel_budget} onChange={handleChange} className="form-control" />
-        </div>
-        <div className="form-group">
-          <label>Include Malls:</label>
-          <select name="mall_recommendation" value={formData.mall_recommendation} onChange={handleChange} className="form-control">
-            <option value="no">No</option>
-            <option value="yes">Yes</option>
-          </select>
-        </div>
+        
         <button type="submit" className="btn-submit">Get Recommendations</button>
       </form>
       
