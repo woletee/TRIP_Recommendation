@@ -41,7 +41,7 @@ const Navbar = ({ handleOrderPopup }) => {
       <nav className="fixed top-0 right-0 w-full z-50 bg-white backdrop-blur-sm text-black shadow-md">
         <div className="bg-gradient-to-r from-primary to-secondary text-white ">
         </div>
-        <div className="container py-3 sm:py-0">
+        <div className="container13 py-3 sm:py-0">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4  font-bold text-2xl">
             </div>
