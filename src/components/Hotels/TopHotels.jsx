@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const TopHotels = () => {
   const [hotels, setHotels] = useState([]);
@@ -23,126 +26,169 @@ const TopHotels = () => {
       });
   }, []);
 
+  const displayHotels = (hotelsData) => {
+    if (!hotelsData || hotelsData.length === 0) {
+      return <p>Finding Hotels...</p>;
+    }
+
+    return hotelsData.map((hotel, index) => (
+      <HotelCard key={hotel.hotel_id || index}>
+        <HotelName>{hotel.name}</HotelName>
+        <HotelImage 
+          src={hotel.thumbnail} 
+          alt={hotel.name}
+          onClick={() => window.open(`https://map.naver.com/v5/search/${hotel.name}/place/${hotel.location.lat},${hotel.location.lng}`, '_blank')}
+        />
+        <HotelDetails>
+          <p>City: {hotel.city}</p>
+          {hotel.rating && hotel.rating.value && (
+            <p>Rating: {hotel.rating.value} ({hotel.rating.count} reviews)</p>
+          )}
+          {hotel.price && hotel.price.value && (
+            <p>Price: ${hotel.price.value}</p>
+          )}
+          {hotel.star && (
+            <p>Star Rating: {hotel.star}</p>
+          )}
+          {hotel.phone && (
+            <p>Phone: {hotel.phone}</p>
+          )}
+          <MapIcon 
+            onClick={() => window.open(`https://map.naver.com/v5/search/${hotel.name}/place/${hotel.location.lat},${hotel.location.lng}`, '_blank')}
+          >
+            📍
+          </MapIcon>
+          <LikeIcon>👍</LikeIcon>
+          <DislikeIcon>👎</DislikeIcon>
+        </HotelDetails>
+        <Link to={`/places/recommend?longitude=${encodeURIComponent(hotel.location.lng)}&latitude=${encodeURIComponent(hotel.location.lat)}`}>
+          <PlaceLink>More</PlaceLink>
+        </Link>
+      </HotelCard>
+    ));
+  };
+
   if (loading) {
-    return <div style={styles.loading}>Loading...</div>;
+    return <Loading>Loading...</Loading>;
   }
 
   if (error) {
-    return <div style={styles.error}>Error: {error.message}</div>;
+    return <Error>Error: {error.message}</Error>;
   }
 
   return (
-    <div style={styles.container}>
-      <div style={styles.titleContainer}>
-        <h1 style={styles.title}>Popular Hotels</h1>
-      </div>
-      <div style={styles.hotelGrid}>
-        {hotels.map(hotel => (
-          <div key={hotel.hotel_id} style={styles.hotelItem}>
-            <h2 style={styles.hotelName}>{hotel.name}</h2>
-            <img src={hotel.thumbnail} alt={hotel.name} style={styles.thumbnail} />
-            <p style={styles.city}>{hotel.city}</p>
-            <p style={styles.rating}>Rating: {hotel.rating.value} ({hotel.rating.count} reviews)</p>
-            <p style={styles.price}>Price: ${hotel.price.value}</p>
-            <div style={styles.linksContainer}>
-              <a href={hotel.book_url} target="_blank" rel="noopener noreferrer" style={styles.bookButton}>More</a>
-              <span 
-                style={styles.mapIcon}
-                onClick={() => window.open(`https://map.naver.com/v5/search/${hotel.name}/place/${hotel.location.lat},${hotel.location.lng}`, '_blank')}
-              >
-                📍
-              </span>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <Container>
+      <Title>Popular Hotels</Title>
+      <HotelsContainer>
+        {displayHotels(hotels)}
+      </HotelsContainer>
+    </Container>
   );
 };
 
-const styles = {
-  container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: '20px',
-    fontFamily: 'Arial, sans-serif',
-  },
-  titleContainer: {
-    marginBottom: '40px', // Add extra space above the title
-  },
-  title: {
-    textAlign: 'left',
-    color: '#333',
-    fontSize: '2.5em',
-    fontWeight: 'bold',
-    borderBottom: '4px solid #333',
-    display: 'inline-block',
-    paddingBottom: '10px',
-  },
-  hotelGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1fr)',
-    gap: '20px',
-  },
-  hotelItem: {
-    backgroundColor: '#f9f9f9',
-    padding: '20px',
-    borderRadius: '10px',
-    boxShadow: '0 0 10px rgba(0,0,0,0.1)',
-    transition: 'transform 0.2s',
-  },
-  hotelName: {
-    margin: '0 0 10px',
-    color: '#333',
-  },
-  thumbnail: {
-    width: '100%',
-    borderRadius: '10px',
-    marginBottom: '10px',
-  },
-  city: {
-    fontSize: '18px',
-    color: '#777',
-    marginBottom: '5px',
-  },
-  rating: {
-    fontSize: '16px',
-    color: '#555',
-    marginBottom: '5px',
-  },
-  price: {
-    fontSize: '20px',
-    color: '#333',
-    fontWeight: 'bold',
-    marginBottom: '10px',
-  },
-  linksContainer: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  bookButton: {
-    display: 'inline-block',
-    padding: '10px 15px',
-    backgroundColor: '#28a745',
-    color: '#fff',
-    textDecoration: 'none',
-    borderRadius: '5px',
-    marginRight: '10px',
-  },
-  mapIcon: {
-    cursor: 'pointer',
-    fontSize: '1.5rem', // Adjust size as needed
-  },
-  loading: {
-    textAlign: 'center',
-    fontSize: '24px',
-    color: '#333',
-  },
-  error: {
-    textAlign: 'center',
-    fontSize: '24px',
-    color: 'red',
-  },
-};
+const Container = styled.div`
+  padding: 20px;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+`;
+
+const Title = styled.h1`
+  font-size: 2.5rem;
+  color: #333;
+  text-align: left;
+`;
+
+const HotelsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const HotelCard = styled.div`
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  flex: 1 1 calc(25% - 32px); // 4 hotels per row
+  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: calc(25% - 32px);
+  text-align: left;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+`;
+
+const HotelName = styled.h2`
+  font-size: 1.5rem;
+  color: #333;
+`;
+
+const HotelImage = styled.img`
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+`;
+
+const HotelDetails = styled.div`
+  font-size: 1rem;
+  color: #666;
+`;
+
+const PlaceLink = styled.a`
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
+const MapIcon = styled.span`
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1.5rem; // Adjust size as needed
+`;
+
+const LikeIcon = styled.span`
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1.5rem; // Adjust size as needed
+  color: green;
+`;
+
+const DislikeIcon = styled.span`
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1.5rem; // Adjust size as needed
+  color: red;
+`;
+
+const Loading = styled.div`
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+`;
+
+const Error = styled.div`
+  text-align: center;
+  font-size: 24px;
+  color: red;
+`;
 
 export default TopHotels;
