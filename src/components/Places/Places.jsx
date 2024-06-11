@@ -101,7 +101,7 @@ const Places = () => {
           <h2>Recommended Places</h2>
           <ul>
             {results.places.map((place, index) => (
-              <li key={index}>{place.Name} - {place.predicted_rating}</li>
+              <li key={index}>{place.Name}</li>
             ))}
           </ul>
           
