@@ -50,7 +50,6 @@ const TopRestaurants = () => {
                 </Link>
                 <RestaurantName>{restaurant.name}</RestaurantName>
                 <RestaurantDetails>
-                    <p>Ranking: {restaurant.Ranking}</p>
                     <p>Address: {restaurant.address}</p>
                     <p>Number of Reviews: {restaurant.numberOfReviews}</p>
                     <p>Phone: {restaurant.phone}</p>

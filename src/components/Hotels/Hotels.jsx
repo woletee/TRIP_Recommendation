@@ -193,44 +193,32 @@ const Hotel = () => {
 
 const Container = styled.div`
     padding: 20px;
-    text-align: center;
-    background-color: #f0f0f0;
     min-height: 100vh;
 `;
 
 const Title = styled.h1`
     font-size: 2.5rem;
-    color: #333;
+    margin: 20px 0;
+    padding-left: 10px;
+    border-left: 8px solid rgba(30, 135, 175, 0.5); /* Adjust the color to match the primary color at 50% opacity */
+    padding: 0.5rem 0; /* Equivalent to py-2 */
+    padding-left: 0.5rem; /* Equivalent to pl-2 */
+    font-size: 1.65rem; /* Equivalent to text-3xl */
+    font-weight: bold; /* Equivalent to font-bold */
+    margin-top: 40px;
 `;
 
 const ButtonWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin-bottom: 20px;
 `;
 
 const Button = styled.button`
-    background-color: #007BFF;
+    background-color: #0287a8;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-right: 10px; /* Added margin to separate from dropdown */
-
-    &:hover {
-        background-color: #0056b3;
-    }
-`;
-
-const StyledSelect = styled.select`
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
@@ -238,7 +226,22 @@ const StyledSelect = styled.select`
     margin-right: 10px;
 
     &:hover {
-        background-color: #0056b3;
+        background-color: #0287a8;
+    }
+`;
+
+const StyledSelect = styled.select`
+    background-color: #0287a8;
+    color: white;
+    padding: 10.4px 16px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+
+    &:hover {
+        background-color: #0287a8;
     }
 `;
 
@@ -246,7 +249,7 @@ const FormWrapper = styled.form`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-bottom: 20px;
 `;
 
 const FormLabel = styled.label`
@@ -257,17 +260,17 @@ const FormLabel = styled.label`
 
 const FormInput = styled.input`
     margin-left: 5px;
-    padding: 5px;
+    padding: 7px;
     font-size: 1rem;
     border-radius: 5px;
     border: 1px solid #ccc;
 `;
 
 const FormButton = styled.button`
-    background-color: #28a745;
+    background-color: #0287a8;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
@@ -275,7 +278,7 @@ const FormButton = styled.button`
     margin-left: 10px;
 
     &:hover {
-        background-color: #218838;
+        background-color: #0287a8;
     }
 `;
 
@@ -290,7 +293,7 @@ const HotelCard = styled.div`
     padding: 16px;
     margin: 16px;
     border-radius: 8px;
-    flex: 1 1 calc(25% - 32px); // 4 hotels per row
+    flex: 1 1 calc(25% - 32px);
     box-sizing: border-box;
     transition: transform 0.3s, box-shadow 0.3s;
     max-width: calc(25% - 32px);
@@ -311,7 +314,7 @@ const HotelName = styled.h2`
 
 const HotelImage = styled.img`
     max-width: 100%;
-    height: auto;
+    height: 200px;
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 10px;
@@ -326,7 +329,7 @@ const HotelLink = styled.a`
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
     border-radius: 5px;
     text-decoration: none;
@@ -341,17 +344,7 @@ const MapIcon = styled.span`
     display: inline-block;
     margin-left: 10px;
     cursor: pointer;
-    font-size: 1.5rem; // Adjust size as needed
-`;
-
-const HotelDetail = styled.div`
-    margin-top: 20px;
-    text-align: left;
-`;
-
-const NearbyPlaces = styled.div`
-    margin-top: 20px;
-    text-align: left;
+    font-size: 1.5rem;
 `;
 
 export default Hotel;

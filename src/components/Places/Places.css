@@ -5,7 +5,6 @@
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -39,7 +38,7 @@
   }
   
   .btn-submit {
-    background-color: #4CAF50;
+    background-color: #0287a8;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -50,7 +49,7 @@
   }
   
   .btn-submit:hover {
-    background-color: #45a049;
+    background-color: #0287a8;
   }
   
   .results {

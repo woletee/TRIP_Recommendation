@@ -86,14 +86,19 @@ const TopRestaurants = () => {
 
 const Container = styled.div`
     padding: 20px;
-    background-color: #f0f0f0;
     min-height: 100vh;
 `;
 
 const Title = styled.h1`
     font-size: 2.5rem;
-    color: #333;
-    text-align: left;
+    margin: 20px 0;
+    padding-left: 10px;
+    border-left: 8px solid rgba(30, 135, 175, 0.5); /* Adjust the color to match the primary color at 50% opacity */
+    padding: 0.5rem 0; /* Equivalent to py-2 */
+    padding-left: 0.5rem; /* Equivalent to pl-2 */
+    font-size: 1.875rem; /* Equivalent to text-3xl */
+    font-weight: bold; /* Equivalent to font-bold */
+    margin-top: 4rem; /* Equivalent to mt-20 */
 `;
 
 const RestaurantsContainer = styled.div`

@@ -39,8 +39,11 @@ const Places = () => {
   };
 
   return (
-    <div className="container">
-      <h1 className="title">Trip Recommendation</h1>
+    <>
+        <h1 className="my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-bold mt-20 ml-10">
+          Trip Recommendation
+        </h1>
+    <div className="container1">
       <form onSubmit={handleSubmit} className="form">
         <div className="form-group">
           <label>Type of Place:</label>
@@ -137,6 +140,7 @@ const Places = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
