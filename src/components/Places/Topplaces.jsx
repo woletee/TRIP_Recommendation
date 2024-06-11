@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import styled from 'styled-components';
 
@@ -15,11 +16,7 @@ const TopPlaces = () => {
         setLoading(true);
         setError(''); // Reset the error state before fetching
         try {
-            console.log('Fetching top places data...');
             const response = await axios.get('https://ec2-54-221-54-196.compute-1.amazonaws.com/api/top-places'); // Replace with the actual API URL
-            console.log('API Response:', response.data); // Log the API response
-
-            // Check if the response is an array
             if (Array.isArray(response.data)) {
                 const parsedData = response.data;
                 const containsNaN = obj => Object.values(obj).some(value => value === null || value === undefined || value !== value);
@@ -37,27 +34,34 @@ const TopPlaces = () => {
     };
 
     const displayPlaces = (placesData) => {
-        console.log('Displaying Places:', placesData); // Log the places data being displayed
         if (!placesData || placesData.length === 0) {
             return <p>Finding Places...</p>;
         }
 
         return placesData.map((place, index) => (
             <PlaceCard key={place.id || index}>
-                <PlaceImage src={place['image url']} alt={place['ï»¿Name']} />
                 <PlaceName>{place['ï»¿Name']}</PlaceName>
+                <PlaceImage 
+                    src={place['image url']} 
+                    alt={place['ï»¿Name']}
+                    onClick={() => window.open(`https://map.naver.com/v5/search/${encodeURIComponent(place['ï»¿Name'])}/place/${place.latitude},${place.longitude}`, '_blank')}
+                />
                 <PlaceDetails>
                     <p>Type: {place.Type}</p>
                     <p>Location: {place.Location}</p>
                     <p>Rating: {place.Rating}</p>
                     <p>Open Hours: {place['Open Hour']} - {place['Close Hour']}</p>
-                 
                     <MapIcon 
-                        onClick={() => window.open(`https://map.naver.com/v5/search/${place['ï»¿Name']}/place/${place.latitude},${place.longitude}`, '_blank')}
+                        onClick={() => window.open(`https://map.naver.com/v5/search/${encodeURIComponent(place['ï»¿Name'])}/place/${place.latitude},${place.longitude}`, '_blank')}
                     >
                         📍
                     </MapIcon>
+                    <LikeIcon>👍</LikeIcon>
+                    <DislikeIcon>👎</DislikeIcon>
                 </PlaceDetails>
+                <Link to={`/places/recommend?longitude=${encodeURIComponent(place.longitude)}&latitude=${encodeURIComponent(place.latitude)}`}>
+                    <PlaceLink>More</PlaceLink>
+                </Link>
             </PlaceCard>
         ));
     };
@@ -75,60 +79,71 @@ const TopPlaces = () => {
 };
 
 const Container = styled.div`
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    min-height: 100vh;
 `;
 
 const Title = styled.h1`
-    text-align: left;
+    font-size: 2.5rem;
     color: #333;
-    font-size: 2.5em;
-    font-weight: bold;
-    border-bottom: 4px solid #333;
-    display: inline-block;
-    padding-bottom: 10px;
 `;
 
 const PlacesContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
 `;
 
 const PlaceCard = styled.div`
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    flex: 1 1 calc(25% - 20px);
-    max-width: calc(25% - 20px);
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+    flex: 1 1 calc(25% - 32px); // 4 places per row
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: calc(25% - 32px);
     text-align: left;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     &:hover {
         transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 `;
 
-const PlaceImage = styled.img`
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
+const PlaceName = styled.h2`
+    font-size: 1.5rem;
+    color: #333;
 `;
 
-const PlaceName = styled.h2`
-    margin: 0 0 10px;
-    color: #333;
+const PlaceImage = styled.img`
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
 `;
 
 const PlaceDetails = styled.div`
     font-size: 1rem;
     color: #666;
+`;
 
-    p {
-        margin: 5px 0;
+const PlaceLink = styled.a`
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #0056b3;
     }
 `;
 
@@ -137,6 +152,22 @@ const MapIcon = styled.span`
     margin-left: 10px;
     cursor: pointer;
     font-size: 1.5rem; // Adjust size as needed
+`;
+
+const LikeIcon = styled.span`
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1.5rem; // Adjust size as needed
+    color: green;
+`;
+
+const DislikeIcon = styled.span`
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1.5rem; // Adjust size as needed
+    color: red;
 `;
 
 export default TopPlaces;
